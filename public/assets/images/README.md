@@ -1,28 +1,43 @@
-# Event Images
+# Required Images for Open Graph & Social Sharing
 
-## Required Images
+## 📌 og-banner.jpg
+**Location:** `public/assets/images/og-banner.jpg`
 
-### Hero Image
-- **File:** `hero.jpg`
-- **Location:** This directory (`/public/assets/images/`)
-- **Purpose:** Main background image for the hero section
-- **Requirements:**
-  - Format: JPG
-  - Recommended size: 1920x1080px (16:9 aspect ratio)
-  - High quality, optimized for web (< 1MB)
-  - Should represent the event theme and Black mental wellness
-  - Will be overlaid with dark gradient for text readability
+**Purpose:** This is the main preview image that appears when your website is shared on:
+- WhatsApp
+- Facebook
+- LinkedIn
+- Twitter/X
+- Any other social media platform
 
-## Other Image Folders
+**Required Specifications:**
+- **Dimensions:** 1200px × 630px (recommended for optimal display)
+- **Format:** JPG or PNG
+- **File size:** Under 5MB (ideally under 1MB for fast loading)
+- **Content:** Should include:
+  - Event title: "Ottawa Black Mental Health Week 2026"
+  - Theme: "Substance Use and Suicide: Breaking the Silence"
+  - Date: March 2, 2026
+  - Logo (if applicable)
+  - Visually appealing design with good contrast
 
-- `/michelle/` - Community Moments carousel images (6 photos)
-- `/slider/` - Additional slider images (if needed)
-- `/logos/` - OBMH logos (English and French)
+**Note:** Until you add this image, social media platforms may show a broken image or default placeholder.
 
-## Image Optimization Tips
+---
 
-1. Use tools like TinyPNG or ImageOptim to compress images
-2. Maintain high quality while reducing file size
-3. Ensure proper aspect ratios for best display
-4. Use descriptive filenames
-5. Test on different devices to ensure proper rendering
+## 🎨 Design Tips:
+1. Use high contrast text over background images
+2. Keep important text centered (some platforms crop edges)
+3. Use your brand colors (brown/gold theme)
+4. Test the image on different screen sizes before finalizing
+
+---
+
+## 📱 Testing Your Social Sharing:
+After adding `og-banner.jpg`, test how it looks:
+
+1. **Facebook Debugger:** https://developers.facebook.com/tools/debug/
+2. **Twitter Card Validator:** https://cards-dev.twitter.com/validator
+3. **LinkedIn Post Inspector:** https://www.linkedin.com/post-inspector/
+
+Simply paste your URL: `https://bmhw2026.vercel.app` and these tools will show you exactly how your preview will appear.
