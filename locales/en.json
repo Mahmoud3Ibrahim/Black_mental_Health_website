@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "title": "Ottawa Black Mental Health Week 2026",
+    "description": "Ottawa Black Mental Health Week 2026 - Theme: Substance Use and Suicide: Breaking the Silence. Join us for a week-long celebration of Black mental wellness and community healing."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "agenda": "Agenda",
+    "register": "Register"
+  },
+  "hero": {
+    "title": "Ottawa Black Mental Health Week 2026",
+    "subtitle": "Substance Use and Suicide: Breaking the Silence",
+    "date": "Monday, March 2nd, 2026 • 9:00 AM - 5:00 PM",
+    "venue": "Ottawa Conference and Event Centre, 200 Coventry Rd, Ottawa, Ontario",
+    "description": "Join us for a week-long celebration of Black mental wellness featuring powerful keynotes, panels, workshops, and community connection.",
+    "cta": "Register Now on Eventbrite"
+  },
+  "waiting": {
+    "title": "We're Looking Forward to Seeing You!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "💸 Is the event free?",
+        "answer": "Yes! All events are free and open to the public, but registration is required."
+      },
+      {
+        "question": "🗣️ Will the sessions be bilingual?",
+        "answer": "Yes, sessions will be available in English and French."
+      },
+      {
+        "question": "👥 Who can attend?",
+        "answer": "Everyone is welcome — individuals, families, and community organizations."
+      },
+      {
+        "question": "⏰ What time should I arrive?",
+        "answer": "Please arrive at least 30 minutes before the opening ceremony to allow time for registration and seating."
+      },
+      {
+        "question": "🚗 Is parking available?",
+        "answer": "Paid parking is available on site, and the venue is also accessible by public transit."
+      },
+      {
+        "question": "🚍 How can I get there by public transit?",
+        "answer": "The venue is accessible by OC Transpo bus routes and is near the Tremblay LRT station."
+      },
+      {
+        "question": "♿ Is the venue accessible?",
+        "answer": "Yes, the venue is fully accessible and equipped with elevators and accessible washrooms."
+      },
+      {
+        "question": "🧠 Can I attend only part of the day?",
+        "answer": "Yes, you are welcome to join at any time throughout the day's sessions."
+      },
+      {
+        "question": "📧 Who can I contact for more information?",
+        "answer": "For any questions, please contact the organizing team at ottawabmhcoalition@gmail.com"
+      },
+      {
+        "question": "💛 Can I volunteer or get involved?",
+        "answer": "Yes, volunteers are always welcome! You can reach out to the organizing team for opportunities to help during the week."
+      }
+    ]
+  },
+  "about": {
+    "title": "About the Conference",
+    "description": "Join Ottawa Black Mental Health Coalition and community partners for a week-long celebration centering Black mental wellness through powerful keynotes, panels, workshops, and community connection.",
+    "mission": "Our Mission",
+    "missionText": "To break the stigma surrounding mental health in Black communities by fostering open dialogue, providing education, and connecting individuals with culturally competent mental health resources and support systems.",
+    "why": "Why This Matters",
+    "whyText": "Black communities face unique mental health challenges, including systemic barriers to care, cultural stigma, and historical trauma. By addressing substance use and suicide openly, we can save lives and build resilient communities."
+  },
+  "agenda": {
+    "title": "Conference Schedule",
+    "subtitle": "Week-Long Program - March 2-8, 2026",
+    "session1": {
+      "title": "Morning Registration & Networking",
+      "time": "08:30 AM - 09:00 AM",
+      "description": "Attendees register and receive conference materials"
+    },
+    "session2": {
+      "title": "Opening Ceremony - Main Hall",
+      "time": "09:00 AM - 10:00 AM",
+      "description": "Substance Use and Suicide: Breaking the Silence"
+    },
+    "session3": {
+      "title": "Community Expo: Voices & Connections",
+      "time": "10:00 AM - 04:00 PM",
+      "description": "Main Hall - Connecting Caregivers: Information, experts and entertainment. Room 106H - Quieter Connections: 1 on 1 Peer Support and System Navigation"
+    },
+    "session4": {
+      "title": "Community of Practice - Boardrooms",
+      "time": "10:30 AM - 03:30 PM",
+      "description": "Clinical workshops for all mental health professionals"
+    },
+    "session5": {
+      "title": "Closing Reflections & Next Steps",
+      "time": "03:30 PM - 04:00 PM",
+      "description": "Closing remarks from the Executive Board and calls to action for the week"
+    }
+  },
+  "cta": {
+    "title": "Ready to Join Us?",
+    "subtitle": "Register for free and be part of the change",
+    "button": "Register on Eventbrite"
+  },
+  "footer": {
+    "tagline": "Together, we break the silence. Together, we heal.",
+    "contact": "Contact Us",
+    "email": "ottawabmhcoalition@gmail.com",
+    "rights": "© 2026 Ottawa Black Mental Health Week. All rights reserved.",
+    "credits": "Organized with love by the Ottawa Black community for the Black community.",
+    "developer": "Website design and development by Mahmoud Ibrahim© 2026"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "title": "Semaine de la santé mentale des noirs d'Ottawa 2026",
+    "description": "Semaine de la santé mentale des noirs d'Ottawa 2026 - Thème : Usage de substances et suicide : Briser le silence. Joignez-vous à nous pour une célébration d'une semaine du bien-être mental des personnes noires et de la guérison communautaire."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "agenda": "Programme",
+    "register": "S'inscrire"
+  },
+  "hero": {
+    "title": "Semaine de la Santé Mentale des noirs d'Ottawa 2026",
+    "subtitle": "Usage de substances et suicide : Briser le silence",
+    "date": "Lundi, 2 mars 2026 • 9 h 00 - 17 h 00",
+    "venue": "Centre de conférences et d'événements d'Ottawa, 200 chemin Coventry, Ottawa, Ontario",
+    "description": "Joignez-vous à nous pour une célébration d'une semaine du bien-être mental des personnes noires avec des conférences percutantes, des panels, des ateliers et des échanges communautaires.",
+    "cta": "S'inscrire maintenant sur Eventbrite"
+  },
+  "waiting": {
+    "title": "Nous avons hâte de vous voir !"
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "items": [
+      {
+        "question": "💸 L'événement est-il gratuit ?",
+        "answer": "Oui ! Tous les événements sont gratuits et ouverts au public, mais une inscription est requise."
+      },
+      {
+        "question": "🗣️ Les séances seront-elles bilingues ?",
+        "answer": "Oui. Les séances seront offertes en anglais et en français."
+      },
+      {
+        "question": "👥 Qui peut participer ?",
+        "answer": "Tout le monde est bienvenu : particuliers, familles et organismes communautaires."
+      },
+      {
+        "question": "⏰ À quelle heure devrais-je arriver ?",
+        "answer": "Veuillez arriver au moins 30 minutes avant la cérémonie d'ouverture afin de permettre le temps d'inscription et de placement."
+      },
+      {
+        "question": "🚗 Le stationnement est-il disponible ?",
+        "answer": "Un stationnement payant est disponible sur place, et le lieu est également accessible en transport en commun."
+      },
+      {
+        "question": "🚍 Comment puis-je m'y rendre en transport en commun ?",
+        "answer": "Le site est accessible par les lignes d'autobus d'OC Transpo et se trouve près de la station de train léger Tremblay."
+      },
+      {
+        "question": "♿ Le lieu est-il accessible ?",
+        "answer": "Oui, le lieu est entièrement accessible et équipé d'ascenseurs et de toilettes accessibles."
+      },
+      {
+        "question": "🧠 Puis-je assister seulement à une partie de la journée ?",
+        "answer": "Oui, vous pouvez participer à tout moment durant la journée."
+      },
+      {
+        "question": "📧 Qui puis-je contacter pour plus d'informations ?",
+        "answer": "Pour toute question, veuillez contacter l'équipe organisatrice à ottawabmhcoalition@gmail.com"
+      },
+      {
+        "question": "💛 Puis-je faire du bénévolat ou m'impliquer ?",
+        "answer": "Oui, les bénévoles sont toujours les bienvenus ! Vous pouvez contacter l'équipe organisatrice pour savoir comment participer pendant la semaine."
+      }
+    ]
+  },
+  "about": {
+    "title": "À propos de la conférence",
+    "description": "Rejoignez la Coalition pour la santé mentale des personnes noires d'Ottawa et ses partenaires communautaires pour une célébration d'une semaine axée sur le bien-être mental des personnes noires, avec des conférences percutantes, des panels, des ateliers et des échanges communautaires.",
+    "mission": "Notre mission",
+    "missionText": "Briser la stigmatisation entourant la santé mentale dans les communautés noires en favorisant le dialogue ouvert, en offrant de l'éducation et en connectant les individus avec des ressources et des systèmes de soutien en santé mentale culturellement compétents.",
+    "why": "Pourquoi c'est important",
+    "whyText": "Les communautés noires font face à des défis uniques en matière de santé mentale, notamment des obstacles systémiques aux soins, la stigmatisation culturelle et les traumatismes historiques. En abordant ouvertement la toxicomanie et le suicide, nous pouvons sauver des vies et construire des communautés résilientes."
+  },
+  "agenda": {
+    "title": "Programme de la conférence",
+    "subtitle": "Programme d'une semaine - 2 au 8 mars 2026",
+    "session1": {
+      "title": "Inscription matinale et réseautage",
+      "time": "8 h 30 – 9 h 00",
+      "description": "Les participant·e·s s'inscrivent et reçoivent le matériel de la conférence"
+    },
+    "session2": {
+      "title": "Cérémonie d'ouverture – Grande salle",
+      "time": "9 h 00 – 10 h 00",
+      "description": "Usage de substances et suicide : Briser le silence"
+    },
+    "session3": {
+      "title": "Expo communautaire : Voix et connexions",
+      "time": "10 h 00 – 16 h 00",
+      "description": "Liens aidant·e·s : information, expert·e·s et animation. Salle 106H - Connexions tranquille : Entraide individuelle entre pairs et navigation dans le système"
+    },
+    "session4": {
+      "title": "Communauté de pratique – Salles de réunion",
+      "time": "10 h 30 – 15 h 30",
+      "description": "Ateliers cliniques pour tous les professionnel·le·s de la santé mentale"
+    },
+    "session5": {
+      "title": "Réflexions finales et prochaines étapes",
+      "time": "15 h 30 – 16 h 00",
+      "description": "Remarques de clôture du conseil exécutif et appels à l'action pour la semaine"
+    }
+  },
+  "cta": {
+    "title": "Prêt à vous joindre à nous?",
+    "subtitle": "Inscrivez-vous gratuitement et faites partie du changement",
+    "button": "S'inscrire sur Eventbrite"
+  },
+  "footer": {
+    "tagline": "Ensemble, nous brisons le silence. Ensemble, nous guérissons.",
+    "contact": "Contactez-nous",
+    "email": "ottawabmhcoalition@gmail.com",
+    "rights": "© 2026 Semaine de la santé mentale des noirs d'Ottawa. Tous droits réservés.",
+    "credits": "Organisé avec amour par la communauté noire d'Ottawa pour la communauté noire.",
+    "developer": "Conception et développement du site Web par Mahmoud Ibrahim© 2026"
+  }
+}
