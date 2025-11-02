@@ -1,13 +1,48 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-gradient-to-b from-black to-bmhw-brown/20 border-t border-bmhw-gold/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/images/cta-footer-bg.jpg"
+          alt="Footer Background"
+          fill
+          className="object-cover object-center"
+          quality={85}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-bmhw-black/85 via-bmhw-brown/70 to-bmhw-black/90"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* CTA Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-bmhw-gold mb-8 drop-shadow-2xl">
+            {t('cta.title')}
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-10"></div>
+
+          <div className="bg-bmhw-brown/40 backdrop-blur-md p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-bmhw-gold/30 hover:border-bmhw-gold/70 transition-all duration-500 transform hover:scale-[1.02] shadow-2xl max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-stone-200 mb-10 font-semibold leading-relaxed">
+              {t('cta.subtitle')}
+            </p>
+            <a
+              href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1090395364889"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold text-bmhw-black px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-bmhw-gold/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+            >
+              {t('cta.button')}
+            </a>
+          </div>
+        </div>
+
         {/* Tagline */}
         <div className="text-center mb-10">
           <p className="text-xl sm:text-2xl md:text-3xl font-bold text-bmhw-gold italic drop-shadow-lg">

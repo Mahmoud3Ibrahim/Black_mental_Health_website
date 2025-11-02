@@ -45,7 +45,7 @@ export default function WeAreWaitingYou() {
       {/* Background Hero Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/images/waiting-hero.jpg"
+          src="/assets/images/join-hero.jpg"
           alt="We Are Waiting You"
           fill
           className="object-cover object-center"
@@ -143,24 +143,6 @@ export default function WeAreWaitingYou() {
           <p className="text-bmhw-gold/70 text-sm font-semibold drop-shadow-lg">
             {currentIndex + 1} / {images.length}
           </p>
-        </div>
-
-        {/* CTA Section - Ready to Join Us */}
-        <div className="mt-20 text-center bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold p-8 sm:p-12 rounded-2xl shadow-2xl animate-fade-in transform hover:scale-[1.02] transition-all duration-500 max-w-4xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-bmhw-black mb-4 drop-shadow-sm">
-            {t('cta.title')}
-          </h3>
-          <p className="text-base sm:text-lg md:text-xl text-bmhw-brown mb-8 font-semibold">
-            {t('cta.subtitle')}
-          </p>
-          <a
-            href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1090395364889"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-bmhw-black text-bmhw-gold px-10 py-4 rounded-full text-lg font-bold hover:bg-bmhw-brown transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1"
-          >
-            {t('cta.button')}
-          </a>
         </div>
       </div>
     </section>

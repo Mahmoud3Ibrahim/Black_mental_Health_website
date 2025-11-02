@@ -33,7 +33,7 @@ function SessionCard({ session, index }: SessionCardProps) {
           <span className="font-semibold drop-shadow-md">{t(`agenda.${session}.time`)}</span>
         </div>
       </div>
-      <p className="text-gray-100 leading-relaxed text-sm drop-shadow-md">
+      <p className="text-stone-200 leading-relaxed text-sm drop-shadow-md">
         {t(`agenda.${session}.description`)}
       </p>
     </div>
@@ -50,7 +50,7 @@ export default function Agenda() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/conference-hero.jpg"
-          alt="Conference Schedule"
+          alt="Event Schedule"
           fill
           className="object-cover object-center"
           quality={85}
@@ -67,7 +67,7 @@ export default function Agenda() {
             {t('agenda.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto font-semibold drop-shadow-lg">
+          <p className="text-lg md:text-xl text-stone-200 max-w-3xl mx-auto font-semibold drop-shadow-lg">
             {t('agenda.subtitle')}
           </p>
         </div>

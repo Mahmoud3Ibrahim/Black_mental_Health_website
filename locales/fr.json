@@ -14,7 +14,10 @@
     "subtitle": "Usage de substances et suicide : Briser le silence",
     "date": "Lundi, 2 mars 2026 • 9 h 00 - 17 h 00",
     "venue": "Centre de conférences et d'événements d'Ottawa, 200 chemin Coventry, Ottawa, Ontario",
-    "description": "Joignez-vous à nous pour une célébration d'une semaine du bien-être mental des personnes noires avec des conférences percutantes, des panels, des ateliers et des échanges communautaires.",
+    "description": "Joignez-vous à nous pour une semaine d'événements sur la santé mentale et le bien-être des noirs avec des conférences percutantes, des panels, des ateliers, de la formation et des échanges communautaires.",
+    "crisisTitle": "Besoin d'aide maintenant?",
+    "crisisLine1": "Si vous pensez au suicide ou vous êtes inquiet pour quelqu'un d'autre",
+    "crisisLine2": "Appelez ou envoyez un texto au 9-8-8 sans frais, à tout moment. Les lignes sont ouvertes 24/7/365.",
     "cta": "S'inscrire maintenant sur Eventbrite"
   },
   "waiting": {
@@ -37,11 +40,11 @@
       },
       {
         "question": "⏰ À quelle heure devrais-je arriver ?",
-        "answer": "Veuillez arriver au moins 30 minutes avant la cérémonie d'ouverture afin de permettre le temps d'inscription et de placement."
+        "answer": "Les participant·e·s peuvent arriver à tout moment durant la journée entre 8 h 30 et 16 h 00. Les partenaires communautaires et le personnel des agences doivent arriver à 8 h 00 pour installer les kiosques dans la grande salle."
       },
       {
-        "question": "🚗 Le stationnement est-il disponible ?",
-        "answer": "Un stationnement payant est disponible sur place, et le lieu est également accessible en transport en commun."
+        "question": "🚗 Stationnement",
+        "answer": "Un stationnement GRATUIT intérieur et extérieur est disponible au Centre de conférences et d'événements d'Ottawa. Vous devez enregistrer votre véhicule en utilisant le code QR à votre arrivée."
       },
       {
         "question": "🚍 Comment puis-je m'y rendre en transport en commun ?",
@@ -49,7 +52,7 @@
       },
       {
         "question": "♿ Le lieu est-il accessible ?",
-        "answer": "Oui, le lieu est entièrement accessible et équipé d'ascenseurs et de toilettes accessibles."
+        "answer": "Oui, le lieu est entièrement accessible et équipé d'ascenseurs et de toilettes accessibles. Veuillez nous contacter si vous avez besoin d'accommodements spécifiques à ottawabmhcoalition@gmail.com"
       },
       {
         "question": "🧠 Puis-je assister seulement à une partie de la journée ?",
@@ -66,20 +69,21 @@
     ]
   },
   "about": {
-    "title": "À propos de la conférence",
-    "description": "Rejoignez la Coalition pour la santé mentale des personnes noires d'Ottawa et ses partenaires communautaires pour une célébration d'une semaine axée sur le bien-être mental des personnes noires, avec des conférences percutantes, des panels, des ateliers et des échanges communautaires.",
+    "title": "À propos de l'événement",
+    "description": "Cette année, nous explorons deux sujets importants qui touchent les familles de nos communautés. Nous invitons la communauté à briser le silence entourant la toxicomanie et le suicide dans nos communautés. Nous encourageons tout le monde à en apprendre davantage sur ces problèmes qui touchent les individus et leurs familles, à rechercher des signes qu'une personne a besoin d'aide et à s'appuyer sur les soutiens communautaires disponibles.",
+    "joinUs": "Joignez-vous à nous en personne le 2 mars et toute la semaine lors d'événements en ligne et partout dans la ville.",
     "mission": "Notre mission",
-    "missionText": "Briser la stigmatisation entourant la santé mentale dans les communautés noires en favorisant le dialogue ouvert, en offrant de l'éducation et en connectant les individus avec des ressources et des systèmes de soutien en santé mentale culturellement compétents.",
+    "missionText": "Briser la stigmatisation entourant la santé mentale dans les communautés noires en favorisant le dialogue ouvert, en fournissant de l'information et de la formation, et en connectant les individus avec des ressources et des systèmes de soutien en santé mentale culturellement affirmatifs.",
     "why": "Pourquoi c'est important",
-    "whyText": "Les communautés noires font face à des défis uniques en matière de santé mentale, notamment des obstacles systémiques aux soins, la stigmatisation culturelle et les traumatismes historiques. En abordant ouvertement la toxicomanie et le suicide, nous pouvons sauver des vies et construire des communautés résilientes."
+    "whyText": "Les communautés noires font face à des défis uniques en matière de santé mentale, notamment le racisme, les obstacles systémiques aux soins, la stigmatisation et les traumatismes historiques. En abordant ouvertement la toxicomanie, le suicide et leurs impacts, nous pouvons sauver des vies et construire des communautés résilientes."
   },
   "agenda": {
-    "title": "Programme de la conférence",
-    "subtitle": "Programme d'une semaine - 2 au 8 mars 2026",
+    "title": "Programme de l'événement",
+    "subtitle": "2 mars 2026",
     "session1": {
-      "title": "Inscription matinale et réseautage",
+      "title": "Inscription et accueil",
       "time": "8 h 30 – 9 h 00",
-      "description": "Les participant·e·s s'inscrivent et reçoivent le matériel de la conférence"
+      "description": "Les participants s'inscrivent et reçoivent le matériel de la conférence"
     },
     "session2": {
       "title": "Cérémonie d'ouverture – Grande salle",
@@ -87,9 +91,9 @@
       "description": "Usage de substances et suicide : Briser le silence"
     },
     "session3": {
-      "title": "Expo communautaire : Voix et connexions",
+      "title": "Expo communautaire – Connexions douces",
       "time": "10 h 00 – 16 h 00",
-      "description": "Liens aidant·e·s : information, expert·e·s et animation. Salle 106H - Connexions tranquille : Entraide individuelle entre pairs et navigation dans le système"
+      "description": "Grande salle : Liens d'aides : information, expert·e·s et divertissement. Salle 106H - Connexions douces: Inscrivez-vous pour bénéficier d'une assistance individuelle entre pairs et d'une aide à la navigation dans le système."
     },
     "session4": {
       "title": "Communauté de pratique – Salles de réunion",
@@ -97,7 +101,7 @@
       "description": "Ateliers cliniques pour tous les professionnel·le·s de la santé mentale"
     },
     "session5": {
-      "title": "Réflexions finales et prochaines étapes",
+      "title": "Appel à l'action – Grande salle",
       "time": "15 h 30 – 16 h 00",
       "description": "Remarques de clôture du conseil exécutif et appels à l'action pour la semaine"
     }
@@ -105,7 +109,12 @@
   "cta": {
     "title": "Prêt à vous joindre à nous?",
     "subtitle": "Inscrivez-vous gratuitement et faites partie du changement",
-    "button": "S'inscrire sur Eventbrite"
+    "button": "S'inscrire sur Eventbrite",
+    "locationTitle": "Trouvez-nous ici"
+  },
+  "performer": {
+    "title": "Présentation de l'artiste vedette de la Semaine de la santé mentale des noirs 2026",
+    "description": "La musique, la danse, la narration et les arts créatifs ont été liés à des pratiques culturellement affirmatives en santé mentale. La CSMNО reconnaît le rôle important que les arts jouent dans le soutien de la santé mentale et du bien-être. La musique et le mouvement sont connus pour améliorer l'humeur et augmenter l'énergie. Pour beaucoup de gens, les arts peuvent être un exutoire pour les émotions fortes, ou une façon de traiter les expériences de la vie. Pour certains, cela peut même être un moyen de guérir. Cette année, la CSMNΟ est ravie de présenter un artiste local qui démontre ce lien entre l'expression créative, l'espoir et le bien-être."
   },
   "footer": {
     "tagline": "Ensemble, nous brisons le silence. Ensemble, nous guérissons.",

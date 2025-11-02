@@ -12,7 +12,7 @@ export default function About() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/about-hero.jpg"
-          alt="About the Conference"
+          alt="About the Event"
           fill
           className="object-cover object-center"
           quality={85}
@@ -29,8 +29,11 @@ export default function About() {
             {t('about.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-10"></div>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-100 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-lg md:text-xl lg:text-2xl text-stone-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
             {t('about.description')}
+          </p>
+          <p className="text-lg md:text-xl text-bmhw-gold font-bold max-w-3xl mx-auto leading-relaxed drop-shadow-lg mt-8">
+            {t('about.joinUs')}
           </p>
         </div>
 
@@ -57,7 +60,7 @@ export default function About() {
                 {t('about.mission')}
               </h3>
             </div>
-            <p className="text-gray-100 text-base md:text-lg leading-relaxed drop-shadow-md">
+            <p className="text-stone-200 text-base md:text-lg leading-relaxed drop-shadow-md">
               {t('about.missionText')}
             </p>
           </div>
@@ -84,7 +87,7 @@ export default function About() {
                 {t('about.why')}
               </h3>
             </div>
-            <p className="text-gray-100 text-base md:text-lg leading-relaxed drop-shadow-md">
+            <p className="text-stone-200 text-base md:text-lg leading-relaxed drop-shadow-md">
               {t('about.whyText')}
             </p>
           </div>

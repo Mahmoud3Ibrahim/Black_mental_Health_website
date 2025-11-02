@@ -34,17 +34,18 @@ export default function Hero() {
       </div>
 
       {/* Logo - Top Left */}
-      <div className="absolute top-6 left-6 z-30">
-        <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40">
+      <div className="absolute top-6 left-16 sm:left-20 md:left-24 z-30">
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48">
           <Image
             src={logoSrc}
             alt={i18n.language === 'fr'
               ? 'Coalition pour la Santé Mentale des Noirs d\'Ottawa'
               : 'Ottawa Black Mental Health Coalition'}
             fill
-            className="object-contain drop-shadow-2xl"
+            className="object-contain"
+            style={{ filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 4px rgba(255, 255, 255, 1))' }}
             priority
-            sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, 160px"
+            sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
           />
         </div>
       </div>
@@ -60,6 +61,22 @@ export default function Hero() {
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-bmhw-black italic drop-shadow-sm">
               {t('hero.subtitle')}
             </h2>
+          </div>
+
+          {/* Crisis Helpline Disclaimer */}
+          <div className="max-w-lg mx-auto mt-4 bg-red-900/85 backdrop-blur-md border-2 border-red-400/70 px-4 py-3 rounded-xl shadow-2xl">
+            <h3 className="text-bmhw-gold font-bold text-base sm:text-lg mb-2 text-center flex items-center justify-center gap-1.5">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              {t('hero.crisisTitle')}
+            </h3>
+            <p className="text-white text-xs sm:text-sm leading-snug text-center font-medium">
+              {t('hero.crisisLine1')}
+            </p>
+            <p className="text-white text-xs sm:text-sm leading-snug text-center font-bold mt-1">
+              {t('hero.crisisLine2')}
+            </p>
           </div>
 
           <div className="space-y-3 mt-8">
@@ -78,7 +95,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mt-6 leading-relaxed drop-shadow-lg px-4">
+          <p className="text-base sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto mt-6 leading-relaxed drop-shadow-lg px-4">
             {t('hero.description')}
           </p>
 

@@ -100,10 +100,10 @@ export default function FAQ() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center py-16 px-4">
-      {/* Background Image - placeholder for future image */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/images/faq-bg.jpg"
+          src="/assets/images/faq-hero.jpg"
           alt="FAQ Background"
           fill
           className="object-cover object-center"

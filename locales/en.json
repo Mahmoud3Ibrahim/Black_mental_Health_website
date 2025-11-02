@@ -14,7 +14,10 @@
     "subtitle": "Substance Use and Suicide: Breaking the Silence",
     "date": "Monday, March 2nd, 2026 • 9:00 AM - 5:00 PM",
     "venue": "Ottawa Conference and Event Centre, 200 Coventry Rd, Ottawa, Ontario",
-    "description": "Join us for a week-long celebration of Black mental wellness featuring powerful keynotes, panels, workshops, and community connection.",
+    "description": "Join us for a week of Black mental health and wellness events featuring powerful keynotes, panels, workshops, training and community connection.",
+    "crisisTitle": "Need Help Now?",
+    "crisisLine1": "If you are thinking about suicide, or you're worried about someone else",
+    "crisisLine2": "Call or text 9-8-8 toll free, any time. Lines are open 24/7/365.",
     "cta": "Register Now on Eventbrite"
   },
   "waiting": {
@@ -37,11 +40,11 @@
       },
       {
         "question": "⏰ What time should I arrive?",
-        "answer": "Please arrive at least 30 minutes before the opening ceremony to allow time for registration and seating."
+        "answer": "Participants can arrive anytime during day between 8:30 and 4:00 PM. Community partners and agency staff should arrive at 8:00 AM to set up booths in the Main Hall."
       },
       {
-        "question": "🚗 Is parking available?",
-        "answer": "Paid parking is available on site, and the venue is also accessible by public transit."
+        "question": "🚗 Parking",
+        "answer": "FREE indoor and outdoor parking is available at the Ottawa Conference and Event Centre. You must register your vehicle using the QR code when you arrive."
       },
       {
         "question": "🚍 How can I get there by public transit?",
@@ -49,7 +52,7 @@
       },
       {
         "question": "♿ Is the venue accessible?",
-        "answer": "Yes, the venue is fully accessible and equipped with elevators and accessible washrooms."
+        "answer": "Yes, the venue is fully accessible and equipped with elevators and accessible washrooms. Please contact us if you require specific accommodations at ottawabmhcoalition@gmail.com"
       },
       {
         "question": "🧠 Can I attend only part of the day?",
@@ -66,46 +69,52 @@
     ]
   },
   "about": {
-    "title": "About the Conference",
-    "description": "Join Ottawa Black Mental Health Coalition and community partners for a week-long celebration centering Black mental wellness through powerful keynotes, panels, workshops, and community connection.",
+    "title": "About the Event",
+    "description": "This year we explore two important topics that impact families in our communities. We invite the community to break the silence surrounding substance-use, suicide in our communities. We encourage everyone to learn more about these issues that impact individuals and their families, look for signs that someone needs help and lean on the community supports that are available.",
+    "joinUs": "Join us in person on March 2nd and all week long at events online and across the city.",
     "mission": "Our Mission",
-    "missionText": "To break the stigma surrounding mental health in Black communities by fostering open dialogue, providing education, and connecting individuals with culturally competent mental health resources and support systems.",
+    "missionText": "To break the stigma surrounding mental health in Black communities by fostering open dialogue, providing information and training, and connecting individuals with culturally-affirming mental health resources and support systems.",
     "why": "Why This Matters",
-    "whyText": "Black communities face unique mental health challenges, including systemic barriers to care, cultural stigma, and historical trauma. By addressing substance use and suicide openly, we can save lives and build resilient communities."
+    "whyText": "Black communities face unique mental health challenges, including racism, systemic barriers to care, stigma, and historical trauma. By addressing substance use, suicide and their impacts openly, we can save lives and build resilient communities."
   },
   "agenda": {
-    "title": "Conference Schedule",
-    "subtitle": "Week-Long Program - March 2-8, 2026",
+    "title": "Event Schedule",
+    "subtitle": "March 2nd, 2026",
     "session1": {
-      "title": "Morning Registration & Networking",
-      "time": "08:30 AM - 09:00 AM",
+      "title": "Registration and Check-in",
+      "time": "08:30am - 09:00am",
       "description": "Attendees register and receive conference materials"
     },
     "session2": {
       "title": "Opening Ceremony - Main Hall",
-      "time": "09:00 AM - 10:00 AM",
+      "time": "09:00am - 10:00am",
       "description": "Substance Use and Suicide: Breaking the Silence"
     },
     "session3": {
-      "title": "Community Expo: Voices & Connections",
-      "time": "10:00 AM - 04:00 PM",
-      "description": "Main Hall - Connecting Caregivers: Information, experts and entertainment. Room 106H - Quieter Connections: 1 on 1 Peer Support and System Navigation"
+      "title": "Community Expo - Quieter Connections",
+      "time": "10:00am - 04:00pm",
+      "description": "Main Hall - Connecting Caregivers: Information, experts and entertainment. Room 106H - Quieter Connections: Sign up for 1 on 1 peer pupport and system navigation help"
     },
     "session4": {
       "title": "Community of Practice - Boardrooms",
-      "time": "10:30 AM - 03:30 PM",
+      "time": "10:30pm - 03:30pm",
       "description": "Clinical workshops for all mental health professionals"
     },
     "session5": {
-      "title": "Closing Reflections & Next Steps",
-      "time": "03:30 PM - 04:00 PM",
+      "title": "Call to Action - Main Hall",
+      "time": "03:30pm - 04:00pm",
       "description": "Closing remarks from the Executive Board and calls to action for the week"
     }
   },
   "cta": {
     "title": "Ready to Join Us?",
     "subtitle": "Register for free and be part of the change",
-    "button": "Register on Eventbrite"
+    "button": "Register on Eventbrite",
+    "locationTitle": "Find Us Here"
+  },
+  "performer": {
+    "title": "Introducing Black Mental Health Week's 2026 Featured Performer",
+    "description": "Music, dance, storytelling and the creative arts have been linked to culturally-affirming practices in mental health. OBMHC recognizes the important role that the arts have in supporting mental health and wellbeing. Music and movement are known to improve mood and increase energy. For many people the arts can be an outlet for strong emotions, or a way to process life's experiences. For some it can even be a way to heal. This year OBMHC is excited to feature a local artist who demonstrates this link between creative expression, hope and wellbeing."
   },
   "footer": {
     "tagline": "Together, we break the silence. Together, we heal.",
