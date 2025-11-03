@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, easeOut } from 'framer-motion';
 
 export default function About() {
   const { t } = useTranslation();
@@ -28,7 +27,7 @@ export default function About() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
