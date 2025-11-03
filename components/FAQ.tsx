@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 // Icon mapping for professional look
 const getIconForQuestion = (question: string) => {
@@ -98,8 +99,31 @@ export default function FAQ() {
     answer: string;
   }>;
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.4, 0, 0.2, 1]
+      }
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-16 px-4">
+    <section className="relative min-h-screen flex items-center justify-center py-10 md:py-12 px-4">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -107,26 +131,41 @@ export default function FAQ() {
           alt="FAQ Background"
           fill
           className="object-cover object-center"
-          quality={85}
+          quality={75}
+          loading="lazy"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-black/90 via-bmhw-brown/80 to-bmhw-black/90"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl w-full mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-14">
+        <motion.div
+          className="text-center mb-8 md:mb-10"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-bmhw-gold mb-3">
             {t('faq.title')}
           </h2>
           <div className="w-24 h-1 bg-bmhw-gold mx-auto"></div>
-        </div>
+        </motion.div>
 
         {/* FAQ Grid - 2 columns on medium+ screens, 1 on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {faqItems.map((item, index) => (
-            <details
+            <motion.details
               key={index}
               className="group bg-bmhw-brown/70 backdrop-blur-sm border border-bmhw-gold/30 rounded-xl p-5 shadow-md hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer"
+              variants={itemVariants}
             >
               <summary className="flex items-start gap-3 cursor-pointer list-none">
                 {/* Icon */}
@@ -158,9 +197,9 @@ export default function FAQ() {
                   {item.answer}
                 </p>
               </div>
-            </details>
+            </motion.details>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

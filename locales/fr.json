@@ -64,7 +64,7 @@
       },
       {
         "question": "💛 Puis-je faire du bénévolat ou m'impliquer ?",
-        "answer": "Oui, les bénévoles sont toujours les bienvenus ! Vous pouvez contacter l'équipe organisatrice pour savoir comment participer pendant la semaine."
+        "answer": "Oui, les bénévoles sont toujours les bienvenus ! Vous pouvez contacter l'équipe organisatrice pour savoir comment participer pendant la semaine. Contactez-nous à notre email : ottawabmhcoalition@gmail.com"
       }
     ]
   },
@@ -113,8 +113,9 @@
     "locationTitle": "Trouvez-nous ici"
   },
   "performer": {
-    "title": "Présentation de l'artiste vedette de la Semaine de la santé mentale des noirs 2026",
-    "description": "La musique, la danse, la narration et les arts créatifs ont été liés à des pratiques culturellement affirmatives en santé mentale. La CSMNО reconnaît le rôle important que les arts jouent dans le soutien de la santé mentale et du bien-être. La musique et le mouvement sont connus pour améliorer l'humeur et augmenter l'énergie. Pour beaucoup de gens, les arts peuvent être un exutoire pour les émotions fortes, ou une façon de traiter les expériences de la vie. Pour certains, cela peut même être un moyen de guérir. Cette année, la CSMNΟ est ravie de présenter un artiste local qui démontre ce lien entre l'expression créative, l'espoir et le bien-être."
+    "subtitle": "Quand l'art devient guérison",
+    "title": "Artiste vedette de la Semaine de la santé mentale des noirs 2026",
+    "description": "La musique, la danse, la narration et les arts créatifs ont été liés à des pratiques culturellement affirmatives en santé mentale. La CSMNО reconnaît le rôle important que les arts jouent dans le soutien de la santé mentale et du bien-être. La musique et le mouvement sont connus pour améliorer l'humeur et augmenter l'énergie. Pour beaucoup de gens, les arts peuvent être un exutoire pour les émotions fortes, ou une façon de traiter les expériences de la vie. Pour certains, cela peut même être un moyen de guérir. Cette année, la CSMNО est ravie de présenter un artiste local qui démontre ce lien entre l'expression créative, l'espoir et le bien-être."
   },
   "footer": {
     "tagline": "Ensemble, nous brisons le silence. Ensemble, nous guérissons.",

@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function WeAreWaitingYou() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
   // Images from Michelle's folder
   const images = [
@@ -31,17 +33,40 @@ export default function WeAreWaitingYou() {
   };
 
   const goToPrevious = () => {
+    setDirection(-1);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
+    setDirection(1);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  // Animation variants for smoother transitions
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+      scale: 0.95
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+      scale: 1
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+      scale: 0.95
+    })
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 md:py-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-16">
       {/* Background Hero Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -49,7 +74,9 @@ export default function WeAreWaitingYou() {
           alt="We Are Waiting You"
           fill
           className="object-cover object-center"
-          quality={85}
+          quality={75}
+          loading="lazy"
+          sizes="100vw"
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-brown/85 via-bmhw-black/75 to-bmhw-brown/85"></div>
@@ -62,35 +89,49 @@ export default function WeAreWaitingYou() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Title */}
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bmhw-gold mb-6 drop-shadow-2xl">
+        <div className="text-center mb-8 md:mb-10 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bmhw-gold mb-4 md:mb-5 drop-shadow-2xl">
             {t('waiting.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto"></div>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative group max-w-5xl mx-auto">
+        <motion.div
+          className="relative group max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           {/* Main Carousel */}
-          <div className="relative w-full aspect-[2000/1428] max-h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-bmhw-black/50">
-            {images.map((src, index) => (
-              <div
-                key={src}
-                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                  index === currentIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0'
-                }`}
+          <div className="relative w-full aspect-[2000/1428] max-h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-bmhw-black/50">
+            <AnimatePresence initial={false} custom={direction} mode="wait">
+              <motion.div
+                key={currentIndex}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.5 }
+                }}
+                className="absolute inset-0"
               >
                 <Image
-                  src={src}
-                  alt={`Community moment ${index + 1}`}
+                  src={images[currentIndex]}
+                  alt={`Community moment ${currentIndex + 1}`}
                   fill
                   className="object-contain object-center"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                   quality={85}
-                  loading="lazy"
+                  priority={currentIndex === 0}
                 />
-              </div>
-            ))}
+              </motion.div>
+            </AnimatePresence>
 
             {/* Gold glow border effect */}
             <div className="absolute inset-0 rounded-3xl ring-2 ring-bmhw-gold/40 pointer-events-none"></div>
@@ -122,7 +163,7 @@ export default function WeAreWaitingYou() {
           </button>
 
           {/* Dot Indicators */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="flex justify-center gap-3 mt-4 md:mt-5">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -136,14 +177,20 @@ export default function WeAreWaitingYou() {
               />
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Counter */}
-        <div className="text-center mt-6">
+        <motion.div
+          className="text-center mt-3"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
           <p className="text-bmhw-gold/70 text-sm font-semibold drop-shadow-lg">
             {currentIndex + 1} / {images.length}
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

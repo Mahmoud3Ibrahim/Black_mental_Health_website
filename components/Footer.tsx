@@ -1,73 +1,39 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
 
 export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="relative overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/assets/images/cta-footer-bg.jpg"
-          alt="Footer Background"
-          fill
-          className="object-cover object-center"
-          quality={85}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-bmhw-black/85 via-bmhw-brown/70 to-bmhw-black/90"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* CTA Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-bmhw-gold mb-8 drop-shadow-2xl">
-            {t('cta.title')}
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-10"></div>
-
-          <div className="bg-bmhw-brown/40 backdrop-blur-md p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-bmhw-gold/30 hover:border-bmhw-gold/70 transition-all duration-500 transform hover:scale-[1.02] shadow-2xl max-w-3xl mx-auto">
-            <p className="text-lg sm:text-xl md:text-2xl text-stone-200 mb-10 font-semibold leading-relaxed">
-              {t('cta.subtitle')}
-            </p>
-            <a
-              href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1090395364889"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold text-bmhw-black px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl hover:shadow-bmhw-gold/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
-            >
-              {t('cta.button')}
-            </a>
-          </div>
-        </div>
+    <footer className="relative bg-gradient-to-b from-bmhw-black via-bmhw-brown/20 to-bmhw-black border-t border-bmhw-gold/20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
 
         {/* Tagline */}
-        <div className="text-center mb-10">
-          <p className="text-xl sm:text-2xl md:text-3xl font-bold text-bmhw-gold italic drop-shadow-lg">
+        <div className="text-center mb-8">
+          <p className="text-xl sm:text-2xl md:text-3xl font-bold text-bmhw-gold italic drop-shadow-lg leading-snug px-4">
             {t('footer.tagline')}
           </p>
         </div>
 
         {/* Contact Info */}
-        <div className="text-center mb-10">
-          <p className="text-gray-400 mb-2 font-semibold">{t('footer.contact')}</p>
+        <div className="text-center mb-6">
+          <p className="text-stone-300 mb-1.5 font-semibold text-sm sm:text-base leading-snug">{t('footer.contact')}</p>
           <a
             href="mailto:ottawabmhcoalition@gmail.com"
-            className="text-bmhw-gold hover:text-yellow-400 transition-colors duration-300 text-lg"
+            className="text-bmhw-gold hover:text-yellow-400 transition-colors duration-300 text-base sm:text-lg font-medium"
           >
             {t('footer.email')}
           </a>
         </div>
 
         {/* Social Media Icons - Facebook, LinkedIn and Instagram */}
-        <div className="flex justify-center gap-8 mb-10">
+        <div className="flex justify-center gap-4 md:gap-6 mb-8">
           <a
             href="https://www.facebook.com/OBMHC"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-14 h-14 bg-transparent border-2 border-bmhw-gold/40 rounded-full flex items-center justify-center text-bmhw-gold hover:bg-bmhw-gold hover:text-bmhw-black hover:border-yellow-400 transition-all duration-300 transform hover:scale-125 shadow-lg hover:shadow-bmhw-gold/50"
+            className="w-12 h-12 sm:w-14 sm:h-14 bg-transparent border-2 border-bmhw-gold/50 rounded-full flex items-center justify-center text-bmhw-gold hover:bg-bmhw-gold hover:text-bmhw-black transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-bmhw-gold/50"
             aria-label="Facebook"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -79,7 +45,7 @@ export default function Footer() {
             href="https://www.linkedin.com/company/ottawa-black-mental-health-coalition/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-14 h-14 bg-transparent border-2 border-bmhw-gold/40 rounded-full flex items-center justify-center text-bmhw-gold hover:bg-bmhw-gold hover:text-bmhw-black hover:border-yellow-400 transition-all duration-300 transform hover:scale-125 shadow-lg hover:shadow-bmhw-gold/50"
+            className="w-12 h-12 sm:w-14 sm:h-14 bg-transparent border-2 border-bmhw-gold/50 rounded-full flex items-center justify-center text-bmhw-gold hover:bg-bmhw-gold hover:text-bmhw-black transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-bmhw-gold/50"
             aria-label="LinkedIn"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -91,7 +57,7 @@ export default function Footer() {
             href="https://www.instagram.com/obmh.c/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-14 h-14 bg-transparent border-2 border-bmhw-gold/40 rounded-full flex items-center justify-center text-bmhw-gold hover:bg-bmhw-gold hover:text-bmhw-black hover:border-yellow-400 transition-all duration-300 transform hover:scale-125 shadow-lg hover:shadow-bmhw-gold/50"
+            className="w-12 h-12 sm:w-14 sm:h-14 bg-transparent border-2 border-bmhw-gold/50 rounded-full flex items-center justify-center text-bmhw-gold hover:bg-bmhw-gold hover:text-bmhw-black transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-bmhw-gold/50"
             aria-label="Instagram"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -101,18 +67,18 @@ export default function Footer() {
         </div>
 
         {/* Credits */}
-        <div className="text-center mb-8">
-          <p className="text-gray-400 italic text-sm sm:text-base">{t('footer.credits')}</p>
+        <div className="text-center mb-4">
+          <p className="text-gray-400 italic text-xs sm:text-sm leading-snug">{t('footer.credits')}</p>
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-500 text-sm">
-          <p>{t('footer.rights')}</p>
+        <div className="text-center text-gray-500 text-xs sm:text-sm mb-4">
+          <p className="leading-snug">{t('footer.rights')}</p>
         </div>
 
         {/* Developer Credit */}
-        <div className="text-center mt-6 pt-6 border-t border-bmhw-gold/20">
-          <p className="text-bmhw-gold text-xs sm:text-sm font-semibold">
+        <div className="text-center pt-4 border-t border-bmhw-gold/20">
+          <p className="text-bmhw-gold text-xs font-semibold leading-snug">
             {t('footer.developer')}
           </p>
         </div>

@@ -2,12 +2,42 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 export default function About() {
   const { t } = useTranslation();
 
+  // Container animation
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  // Individual item animation - simpler
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section id="about" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+    <section
+      id="about"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-16"
+    >
       {/* Background Hero Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -15,7 +45,11 @@ export default function About() {
           alt="About the Event"
           fill
           className="object-cover object-center"
-          quality={85}
+          quality={60}
+          loading="lazy"
+          sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
         {/* Gradient Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-brown/80 via-bmhw-black/70 to-bmhw-brown/80"></div>
@@ -23,23 +57,39 @@ export default function About() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bmhw-gold mb-8 drop-shadow-2xl">
+      <motion.div
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div
+          className="text-center mb-10 md:mb-12"
+          variants={itemVariants}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bmhw-gold mb-4 md:mb-6 drop-shadow-2xl">
             {t('about.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-10"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-6 md:mb-8"></div>
           <p className="text-lg md:text-xl lg:text-2xl text-stone-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
             {t('about.description')}
           </p>
           <p className="text-lg md:text-xl text-bmhw-gold font-bold max-w-3xl mx-auto leading-relaxed drop-shadow-lg mt-8">
             {t('about.joinUs')}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Mission Card */}
-          <div className="bg-bmhw-brown/40 backdrop-blur-md p-8 rounded-2xl border border-bmhw-gold/30 hover:border-bmhw-gold/70 transition-all duration-500 transform hover:scale-[1.03] animate-slide-up shadow-2xl">
+          <motion.div
+            className="bg-bmhw-brown/40 backdrop-blur-md p-8 rounded-2xl border border-bmhw-gold/30 hover:border-bmhw-gold/70 transition-all duration-500 transform hover:scale-[1.03] shadow-2xl"
+            variants={itemVariants}
+          >
             <div className="flex items-center mb-6">
               <div className="w-14 h-14 bg-gradient-to-br from-bmhw-gold to-yellow-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                 <svg
@@ -63,10 +113,13 @@ export default function About() {
             <p className="text-stone-200 text-base md:text-lg leading-relaxed drop-shadow-md">
               {t('about.missionText')}
             </p>
-          </div>
+          </motion.div>
 
           {/* Why This Matters Card */}
-          <div className="bg-bmhw-brown/40 backdrop-blur-md p-8 rounded-2xl border border-bmhw-gold/30 hover:border-bmhw-gold/70 transition-all duration-500 transform hover:scale-[1.03] animate-slide-up shadow-2xl">
+          <motion.div
+            className="bg-bmhw-brown/40 backdrop-blur-md p-8 rounded-2xl border border-bmhw-gold/30 hover:border-bmhw-gold/70 transition-all duration-500 transform hover:scale-[1.03] shadow-2xl"
+            variants={itemVariants}
+          >
             <div className="flex items-center mb-6">
               <div className="w-14 h-14 bg-gradient-to-br from-bmhw-gold to-yellow-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                 <svg
@@ -90,9 +143,9 @@ export default function About() {
             <p className="text-stone-200 text-base md:text-lg leading-relaxed drop-shadow-md">
               {t('about.whyText')}
             </p>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

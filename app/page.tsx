@@ -7,6 +7,7 @@ import Agenda from '@/components/Agenda';
 import FAQ from '@/components/FAQ';
 import WeAreWaitingYou from '@/components/WeAreWaitingYou';
 import FeaturedPerformer from '@/components/FeaturedPerformer';
+import ReadyToJoin from '@/components/ReadyToJoin';
 import Footer from '@/components/Footer';
 import LanguageToggle from '@/components/LanguageToggle';
 import '@/lib/i18n';
@@ -44,6 +45,7 @@ export default function Home() {
       <FAQ />
       <WeAreWaitingYou />
       <FeaturedPerformer />
+      <ReadyToJoin />
       <Footer />
     </main>
   );
