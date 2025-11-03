@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 
 interface SessionCardProps {
   session: string;
@@ -20,7 +20,7 @@ function SessionCard({ session, index }: SessionCardProps) {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
