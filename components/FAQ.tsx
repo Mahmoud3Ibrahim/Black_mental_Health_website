@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, cubicBezier } from 'framer-motion';
 
 // Icon mapping for professional look
 const getIconForQuestion = (question: string) => {
@@ -117,7 +117,7 @@ export default function FAQ() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [0.4, 0, 0.2, 1]
+        ease: cubicBezier(0.4, 0, 0.2, 1)
       }
     }
   };

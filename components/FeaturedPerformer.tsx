@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, easeOut, cubicBezier } from 'framer-motion';
 
 export default function FeaturedPerformer() {
   const { t } = useTranslation();
@@ -32,14 +31,14 @@ export default function FeaturedPerformer() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: easeOut }}
       >
         <motion.div
           className="text-center mb-8 md:mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
         >
           <p className="text-lg md:text-xl lg:text-2xl text-bmhw-gold italic font-semibold mb-2 drop-shadow-lg px-4">
             {t('performer.subtitle')}

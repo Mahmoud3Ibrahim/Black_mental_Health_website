@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { motion, easeOut } from 'framer-motion';
+import { motion, easeOut, cubicBezier } from 'framer-motion';
 
 export default function About() {
   const { t } = useTranslation();
@@ -69,7 +69,7 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-bmhw-gold mb-4 md:mb-6 drop-shadow-2xl">
             {t('about.title')}

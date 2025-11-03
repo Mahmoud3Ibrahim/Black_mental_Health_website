@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, easeOut, cubicBezier } from 'framer-motion';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
@@ -60,13 +59,13 @@ export default function Hero() {
           className="space-y-6 md:space-y-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: easeOut }}
         >
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 1.2, delay: 0.3, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
           >
             {t('hero.title')}
           </motion.h1>
@@ -75,7 +74,7 @@ export default function Hero() {
             className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold px-6 py-3 sm:px-10 sm:py-5 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 1.0, delay: 0.6, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-bmhw-black italic drop-shadow-sm">
               {t('hero.subtitle')}
@@ -87,7 +86,7 @@ export default function Hero() {
             className="max-w-lg mx-auto mt-4 bg-red-900/85 backdrop-blur-md border-2 border-red-400/70 px-4 py-3 rounded-xl shadow-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.6, ease: easeOut }}
           >
             <h3 className="text-bmhw-gold font-bold text-base sm:text-lg mb-2 text-center flex items-center justify-center gap-1.5">
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
