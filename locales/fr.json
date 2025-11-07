@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Semaine de la santé mentale des noirs d'Ottawa 2026",
+    "title": "Semaine de la Santé Mentale des Noirs d'Ottawa 2026",
     "description": "Semaine de la santé mentale des noirs d'Ottawa 2026 - Thème : Usage de substances et suicide : Briser le silence. Joignez-vous à nous pour une célébration d'une semaine du bien-être mental des personnes noires et de la guérison communautaire."
   },
   "nav": {
@@ -10,11 +10,11 @@
     "register": "S'inscrire"
   },
   "hero": {
-    "title": "Semaine de la Santé Mentale des noirs d'Ottawa 2026",
+    "title": "Semaine de la Santé Mentale des Noirs d'Ottawa 2026",
     "subtitle": "Usage de substances et suicide : Briser le silence",
     "date": "Lundi, 2 mars 2026 • 9 h 00 - 17 h 00",
     "venue": "Centre de conférences et d'événements d'Ottawa, 200 chemin Coventry, Ottawa, Ontario",
-    "description": "Joignez-vous à nous pour une semaine d'événements sur la santé mentale et le bien-être des noirs avec des conférences percutantes, des panels, des ateliers, de la formation et des échanges communautaires.",
+    "description": "Rejoignez-nous pour une semaine d'événements consacrés à la santé mentale et au bien-être des Noirs (des personnes noirs), avec des discours, des tables rondes, des ateliers, des formations et des rencontres communautaires passionnantes.",
     "crisisTitle": "Besoin d'aide maintenant?",
     "crisisLine1": "Si vous pensez au suicide ou vous êtes inquiet pour quelqu'un d'autre",
     "crisisLine2": "Appelez ou envoyez un texto au 9-8-8 sans frais, à tout moment. Les lignes sont ouvertes 24/7/365.",
@@ -70,12 +70,12 @@
   },
   "about": {
     "title": "À propos de l'événement",
-    "description": "Cette année, nous explorons deux sujets importants qui touchent les familles de nos communautés. Nous invitons la communauté à briser le silence entourant la toxicomanie et le suicide dans nos communautés. Nous encourageons tout le monde à en apprendre davantage sur ces problèmes qui touchent les individus et leurs familles, à rechercher des signes qu'une personne a besoin d'aide et à s'appuyer sur les soutiens communautaires disponibles.",
-    "joinUs": "Joignez-vous à nous en personne le 2 mars et toute la semaine lors d'événements en ligne et partout dans la ville.",
+    "description": "Cette année, nous explorons deux sujets importants qui touchent les familles dans nos communautés. Nous invitons la communauté à rompre le silence qui entoure la consommation de substances et le suicide dans nos communautés. Nous encourageons tout le monde à s'informer davantage sur ces questions qui touchent les individus et leurs familles, à reconnaître les signes indiquant qu'une personne a besoin d'aide et à s'appuyer sur les soutiens communautaires disponibles.",
+    "joinUs": "Rejoignez-nous en personne le 2 mars et tout au long de la semaine lors d'événements en ligne et dans toute la ville.",
     "mission": "Notre mission",
-    "missionText": "Briser la stigmatisation entourant la santé mentale dans les communautés noires en favorisant le dialogue ouvert, en fournissant de l'information et de la formation, et en connectant les individus avec des ressources et des systèmes de soutien en santé mentale culturellement affirmatifs.",
-    "why": "Pourquoi c'est important",
-    "whyText": "Les communautés noires font face à des défis uniques en matière de santé mentale, notamment le racisme, les obstacles systémiques aux soins, la stigmatisation et les traumatismes historiques. En abordant ouvertement la toxicomanie, le suicide et leurs impacts, nous pouvons sauver des vies et construire des communautés résilientes."
+    "missionText": "Mettre fin à la stigmatisation qui entoure la santé mentale dans les communautés noires en favorisant un dialogue ouvert, en fournissant des informations et des formations, et en mettant les individus en relation avec des ressources et des systèmes de soutien en matière de santé mentale qui tiennent compte de leur culture.",
+    "why": "Pourquoi est-ce important ?",
+    "whyText": "Les communautés noires sont confrontées à des défis uniques en matière de santé mentale, notamment le racisme, les barrières systémiques à l'accès aux soins, la stigmatisation et les traumatismes historiques. En abordant ouvertement la consommation de substances psychoactives, le suicide et leurs conséquences, nous pouvons sauver des vies et bâtir des communautés résilientes."
   },
   "agenda": {
     "title": "Programme de l'événement",
@@ -115,7 +115,10 @@
   "performer": {
     "subtitle": "Quand l'art devient guérison",
     "title": "Artiste vedette de la Semaine de la santé mentale des noirs 2026",
-    "description": "La musique, la danse, la narration et les arts créatifs ont été liés à des pratiques culturellement affirmatives en santé mentale. La CSMNО reconnaît le rôle important que les arts jouent dans le soutien de la santé mentale et du bien-être. La musique et le mouvement sont connus pour améliorer l'humeur et augmenter l'énergie. Pour beaucoup de gens, les arts peuvent être un exutoire pour les émotions fortes, ou une façon de traiter les expériences de la vie. Pour certains, cela peut même être un moyen de guérir. Cette année, la CSMNО est ravie de présenter un artiste local qui démontre ce lien entre l'expression créative, l'espoir et le bien-être."
+    "description": "La musique, la danse, la narration et les arts créatifs sont associés à des pratiques culturellement affirmatives en santé mentale. L’OBMHC reconnaît le rôle important que jouent les arts dans le soutien de la santé mentale et du bien-être.",
+    "meet": "Découvrez notre artiste",
+    "name": "N'nerjie",
+    "bio": "N’nerjie est une autrice-compositrice-interprète noire queer de R&B/Soul originaire de Toronto et maintenant basée à Ottawa, reconnue pour sa voix puissante et ses talents de conteuse. Elle a sorti plusieurs EP et singles depuis 2017 et a remporté en 2024 le prix de l’Auteure-compositrice de l’année aux Capital Music Awards pour \"Tug of War\". Sa musique mêle des sonorités modernes à une touche nostalgique, en mettant l’accent sur l’introspection et la guérison."
   },
   "footer": {
     "tagline": "Ensemble, nous brisons le silence. Ensemble, nous guérissons.",

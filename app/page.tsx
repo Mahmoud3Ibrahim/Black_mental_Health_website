@@ -9,7 +9,6 @@ import WeAreWaitingYou from '@/components/WeAreWaitingYou';
 import FeaturedPerformer from '@/components/FeaturedPerformer';
 import ReadyToJoin from '@/components/ReadyToJoin';
 import Footer from '@/components/Footer';
-import LanguageToggle from '@/components/LanguageToggle';
 import '@/lib/i18n';
 
 export default function Home() {
@@ -47,7 +46,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <LanguageToggle />
       <Hero />
       <About />
       <Agenda />

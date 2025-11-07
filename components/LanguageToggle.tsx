@@ -3,7 +3,11 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 
-export default function LanguageToggle() {
+type LanguageToggleProps = {
+  className?: string;
+};
+
+export default function LanguageToggle({ className }: LanguageToggleProps = {}) {
   const { i18n } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -22,10 +26,13 @@ export default function LanguageToggle() {
     return null;
   }
 
+  const baseClasses =
+    'bg-bmhw-gold text-bmhw-black px-5 py-2 rounded-full font-bold hover:bg-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105';
+
   return (
     <button
       onClick={toggleLanguage}
-      className="fixed top-6 right-6 z-50 bg-bmhw-gold text-bmhw-black px-4 py-2 rounded-full font-bold hover:bg-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+      className={className ? `${baseClasses} ${className}` : baseClasses}
       aria-label="Toggle language"
     >
       {i18n.language === 'en' ? 'FR' : 'EN'}

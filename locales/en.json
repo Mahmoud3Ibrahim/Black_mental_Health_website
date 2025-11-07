@@ -70,7 +70,7 @@
   },
   "about": {
     "title": "About the Event",
-    "description": "This year we explore two important topics that impact families in our communities. We invite the community to break the silence surrounding substance-use, suicide in our communities. We encourage everyone to learn more about these issues that impact individuals and their families, look for signs that someone needs help and lean on the community supports that are available.",
+    "description": "This year we explore two important topics that impact families in our communities. We invite the community to break the silence surrounding substance-use, suicide, and mental health in our communities. We encourage everyone to learn more about these issues that impact individuals and their families, look for signs that someone needs help and lean on the community supports that are available.",
     "joinUs": "Join us in person on March 2nd and all week long at events online and across the city.",
     "mission": "Our Mission",
     "missionText": "To break the stigma surrounding mental health in Black communities by fostering open dialogue, providing information and training, and connecting individuals with culturally-affirming mental health resources and support systems.",
@@ -93,12 +93,12 @@
     "session3": {
       "title": "Community Expo - Quieter Connections",
       "time": "10:00am - 04:00pm",
-      "description": "Main Hall - Connecting Caregivers: Information, experts and entertainment. Room 106H - Quieter Connections: Sign up for 1 on 1 peer pupport and system navigation help"
+      "description": "Main Hall - Connecting Caregivers: Information, experts and entertainment. \nRoom 106H - Quieter Connections: Sign up for 1 on 1 peer pupport and system navigation help"
     },
     "session4": {
       "title": "Community of Practice - Boardrooms",
       "time": "10:30pm - 03:30pm",
-      "description": "Clinical workshops for all mental health professionals"
+      "description": "Clinical workshops for all regulated mental health professionals"
     },
     "session5": {
       "title": "Call to Action - Main Hall",
@@ -115,7 +115,10 @@
   "performer": {
     "subtitle": "When Art Becomes Healing",
     "title": "Black Mental Health Week's 2026 Featured Performer",
-    "description": "Music, dance, storytelling and the creative arts have been linked to culturally-affirming practices in mental health. OBMHC recognizes the important role that the arts have in supporting mental health and wellbeing. Music and movement are known to improve mood and increase energy. For many people the arts can be an outlet for strong emotions, or a way to process life's experiences. For some it can even be a way to heal. This year OBMHC is excited to feature a local artist who demonstrates this link between creative expression, hope and wellbeing."
+    "description": "Music, dance, storytelling and the creative arts have been linked to culturally-affirming practices in mental health. OBMHC recognizes the important role that the arts have in supporting mental health and wellbeing.",
+    "meet": "Meet Our Performer",
+    "name": "N'nerjie",
+    "bio": "N'nerjie is a Black queer R&B/Soul singer-songwriter from Toronto who is now based in Ottawa, known for her raw, soulful vocals and storytelling. She has released several EPs and singles since 2017 and won Songwriter of the Year at the Capital Music Awards in 2024 for \"Tug of War\". Her music blends modern sounds with a nostalgic feel, focusing on themes of introspection and healing."
   },
   "footer": {
     "tagline": "Together, we break the silence. Together, we heal.",

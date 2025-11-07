@@ -54,7 +54,7 @@ function SessionCard({ session, index }: SessionCardProps) {
           <span className="font-semibold drop-shadow-md leading-relaxed">{t(`agenda.${session}.time`)}</span>
         </div>
       </div>
-      <p className="text-stone-200 leading-relaxed text-base md:text-lg drop-shadow-md">
+      <p className="text-stone-200 leading-relaxed text-base md:text-lg drop-shadow-md whitespace-pre-line">
         {t(`agenda.${session}.description`)}
       </p>
     </motion.div>

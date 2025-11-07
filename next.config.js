@@ -6,6 +6,8 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 3600,
     dangerouslyAllowSVG: false,
+    unoptimized: false,
+    remotePatterns: [],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
