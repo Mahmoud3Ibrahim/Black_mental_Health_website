@@ -37,8 +37,8 @@ export default function Hero() {
       </div>
 
       {/* Logo - Top Left */}
-      <div className="absolute top-4 left-4 sm:top-6 sm:left-16 md:left-20 lg:left-24 z-30">
-        <div className="relative w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 lg:left-12 z-20">
+        <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
           <Image
             src={logoSrc}
             alt={i18n.language === 'fr'
@@ -48,13 +48,13 @@ export default function Hero() {
             className="object-contain"
             style={{ filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 4px rgba(255, 255, 255, 1))' }}
             priority
-            sizes="(max-width: 640px) 80px, (max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+            sizes="(max-width: 640px) 64px, (max-width: 768px) 96px, (max-width: 1024px) 128px, 160px"
           />
         </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 sm:pt-36 md:pt-40 lg:pt-32 pb-16">
         <motion.div
           className="space-y-6 md:space-y-8"
           initial={{ opacity: 0 }}
@@ -108,18 +108,22 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <p className="text-lg sm:text-xl md:text-2xl text-bmhw-gold font-bold drop-shadow-lg flex items-center justify-center gap-2">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-              </svg>
-              {t('hero.date')}
+            <p className="text-lg sm:text-xl md:text-2xl text-bmhw-gold font-bold drop-shadow-lg flex items-center justify-center gap-2 leading-tight">
+              <span className="flex-shrink-0 text-bmhw-gold" aria-hidden="true">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <span>{t('hero.date')}</span>
             </p>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-200 font-semibold drop-shadow-lg flex items-center justify-center gap-2">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-bmhw-gold" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-              </svg>
-              {t('hero.venue')}
+            <p className="text-base sm:text-lg md:text-xl text-gray-200 font-semibold drop-shadow-lg flex items-center justify-center gap-2 leading-tight">
+              <span className="flex-shrink-0 text-bmhw-gold" aria-hidden="true">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <span>{t('hero.venue')}</span>
             </p>
           </motion.div>
 

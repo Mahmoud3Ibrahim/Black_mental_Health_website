@@ -14,6 +14,15 @@ import '@/lib/i18n';
 
 export default function Home() {
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'auto';
+    }
+  }, []);
+
+  useEffect(() => {
     // Intersection Observer for fade-in animations
     const observer = new IntersectionObserver(
       (entries) => {
