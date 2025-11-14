@@ -1,15 +1,18 @@
 'use client';
 
 import { useEffect } from 'react';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Agenda from '@/components/Agenda';
-import FAQ from '@/components/FAQ';
-import WeAreWaitingYou from '@/components/WeAreWaitingYou';
-import FeaturedPerformer from '@/components/FeaturedPerformer';
-import ReadyToJoin from '@/components/ReadyToJoin';
-import Footer from '@/components/Footer';
+import dynamic from 'next/dynamic';
 import '@/lib/i18n';
+
+// Dynamic imports for code splitting - load below-the-fold components lazily
+const Hero = dynamic(() => import('@/components/Hero'), { ssr: true });
+const About = dynamic(() => import('@/components/About'), { ssr: false });
+const Agenda = dynamic(() => import('@/components/Agenda'), { ssr: false });
+const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: false });
+const WeAreWaitingYou = dynamic(() => import('@/components/WeAreWaitingYou'), { ssr: false });
+const FeaturedPerformer = dynamic(() => import('@/components/FeaturedPerformer'), { ssr: false });
+const ReadyToJoin = dynamic(() => import('@/components/ReadyToJoin'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function Home() {
   useEffect(() => {

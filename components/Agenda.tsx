@@ -88,6 +88,7 @@ export default function Agenda() {
           quality={60}
           loading="lazy"
           sizes="100vw"
+          fetchPriority="low"
         />
         {/* Gradient Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-brown/85 via-bmhw-black/75 to-bmhw-brown/85"></div>

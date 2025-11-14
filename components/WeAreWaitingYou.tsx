@@ -74,9 +74,10 @@ export default function WeAreWaitingYou() {
           alt="We Are Waiting You"
           fill
           className="object-cover object-center"
-          quality={75}
+          quality={70}
           loading="lazy"
           sizes="100vw"
+          fetchPriority="low"
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-brown/85 via-bmhw-black/75 to-bmhw-brown/85"></div>
@@ -127,7 +128,8 @@ export default function WeAreWaitingYou() {
                   fill
                   className="object-contain object-center"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                  quality={85}
+                  quality={80}
+                  loading={currentIndex === 0 ? undefined : "lazy"}
                   priority={currentIndex === 0}
                 />
               </motion.div>

@@ -131,9 +131,10 @@ export default function FAQ() {
           alt="FAQ Background"
           fill
           className="object-cover object-center"
-          quality={75}
+          quality={70}
           loading="lazy"
           sizes="100vw"
+          fetchPriority="low"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-black/90 via-bmhw-brown/80 to-bmhw-black/90"></div>
       </div>

@@ -16,9 +16,10 @@ export default function ReadyToJoin() {
           alt="Ready to Join"
           fill
           className="object-cover object-center"
-          quality={75}
+          quality={70}
           loading="lazy"
           sizes="100vw"
+          fetchPriority="low"
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-black/85 via-bmhw-brown/70 to-bmhw-black/85"></div>

@@ -1,19 +1,31 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import StructuredData from '@/components/StructuredData';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata: Metadata = {
-  title: 'Ottawa Black Mental Health Week 2026',
+  title: {
+    default: 'Ottawa Black Mental Health Week 2026',
+    template: '%s | OBMHC',
+  },
   description: 'Theme: Substance Use and Suicide – Breaking the Silence | Ottawa Conference & Event Centre, March 2, 2026',
-  keywords: ['mental health', 'Black community', 'Ottawa', 'substance use', 'suicide prevention', 'mental health awareness', 'OBMHC'],
+  keywords: ['mental health', 'Black community', 'Ottawa', 'substance use', 'suicide prevention', 'mental health awareness', 'OBMHC', 'Ottawa Black Mental Health Coalition', 'mental wellness', 'community health'],
   authors: [{ name: 'Ottawa Black Mental Health Coalition' }],
   creator: 'Ottawa Black Mental Health Coalition',
   publisher: 'Ottawa Black Mental Health Coalition',
   metadataBase: new URL('https://bmhw2026.vercel.app'),
   alternates: {
     canonical: '/',
+    languages: {
+      'en-CA': '/',
+      'fr-CA': '/?lang=fr',
+    },
   },
   openGraph: {
     title: 'Ottawa Black Mental Health Week 2026',
@@ -66,6 +78,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="alternate" hrefLang="en" href="https://bmhw2026.vercel.app" />
+        <link rel="alternate" hrefLang="fr" href="https://bmhw2026.vercel.app?lang=fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://bmhw2026.vercel.app" />
+        <StructuredData />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

@@ -16,9 +16,10 @@ export default function FeaturedPerformer() {
           alt="Featured Performer Background"
           fill
           className="object-cover object-center"
-          quality={75}
+          quality={70}
           loading="lazy"
           sizes="100vw"
+          fetchPriority="low"
         />
         {/* Gradient Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-brown/85 via-bmhw-black/80 to-bmhw-brown/85"></div>
@@ -74,7 +75,8 @@ export default function FeaturedPerformer() {
                   alt={`${t('performer.name')} - ${t('performer.meet')}`}
                   fill
                   className="object-cover scale-105 transition-transform duration-500 ease-out hover:scale-110"
-                  quality={85}
+                  quality={80}
+                  loading="lazy"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/20"></div>
