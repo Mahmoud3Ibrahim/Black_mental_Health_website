@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "optimize-images": "node scripts/optimize-images.js",
+    "optimize-images-safe": "node scripts/optimize-images-safe.js",
+    "replace-images": "node scripts/replace-with-optimized.js"
   },
   "dependencies": {
     "critters": "^0.0.23",
@@ -27,6 +30,7 @@
     "eslint": "^8",
     "eslint-config-next": "^15.0.0",
     "postcss": "^8.4.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.0",
     "typescript": "^5"
   }
