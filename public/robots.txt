@@ -8,3 +8,4 @@ Sitemap: https://bmhw2026.vercel.app/sitemap.xml
 # Crawl-delay (optional, helps prevent server overload)
 Crawl-delay: 1
 
+

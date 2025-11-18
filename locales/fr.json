@@ -93,7 +93,12 @@
     "session3": {
       "title": "Expo communautaire – Connexions douces",
       "time": "10 h 00 – 16 h 00",
-      "description": "Grande salle : Liens d'aides : information, expert·e·s et divertissement. Salle 106H - Connexions douces: Inscrivez-vous pour bénéficier d'une assistance individuelle entre pairs et d'une aide à la navigation dans le système."
+      "description": "Grande salle : Liens d'aides : information, expert·e·s et divertissement."
+    },
+    "session3b": {
+      "title": "Connexions douces",
+      "time": "10 h 00 – 16 h 00",
+      "description": "Salle 106H – Connexions douces: Inscrivez-vous pour bénéficier d'une assistance individuelle entre pairs et d'une aide à la navigation dans le système."
     },
     "session4": {
       "title": "Communauté de pratique – Salles de réunion",

@@ -35,3 +35,4 @@ The Image component will:
 
 **This is the recommended approach** - no manual conversion needed!
 
+

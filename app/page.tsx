@@ -8,9 +8,9 @@ import '@/lib/i18n';
 const Hero = dynamic(() => import('@/components/Hero'), { ssr: true });
 const About = dynamic(() => import('@/components/About'), { ssr: false });
 const Agenda = dynamic(() => import('@/components/Agenda'), { ssr: false });
+const FeaturedPerformer = dynamic(() => import('@/components/FeaturedPerformer'), { ssr: false });
 const FAQ = dynamic(() => import('@/components/FAQ'), { ssr: false });
 const WeAreWaitingYou = dynamic(() => import('@/components/WeAreWaitingYou'), { ssr: false });
-const FeaturedPerformer = dynamic(() => import('@/components/FeaturedPerformer'), { ssr: false });
 const ReadyToJoin = dynamic(() => import('@/components/ReadyToJoin'), { ssr: false });
 const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
@@ -52,9 +52,10 @@ export default function Home() {
       <Hero />
       <About />
       <Agenda />
+      <FeaturedPerformer />
       <FAQ />
       <WeAreWaitingYou />
-      <FeaturedPerformer />
+   
       <ReadyToJoin />
       <Footer />
     </main>

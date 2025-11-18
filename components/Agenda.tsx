@@ -63,7 +63,7 @@ function SessionCard({ session, index }: SessionCardProps) {
 
 export default function Agenda() {
   const { t } = useTranslation();
-  const sessions = ['session1', 'session2', 'session3', 'session4', 'session5'];
+  const sessions = ['session1', 'session2', 'session3', 'session3b', 'session4', 'session5'];
 
   // Simple header fade-in
   const headerVariants = {
@@ -88,7 +88,6 @@ export default function Agenda() {
           quality={60}
           loading="lazy"
           sizes="100vw"
-          fetchPriority="low"
         />
         {/* Gradient Overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-brown/85 via-bmhw-black/75 to-bmhw-brown/85"></div>

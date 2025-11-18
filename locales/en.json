@@ -21,7 +21,7 @@
     "cta": "Register Now on Eventbrite"
   },
   "waiting": {
-    "title": "We're Looking Forward to Seeing You!"
+    "title": "We look forward to seeing you in March!"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -70,8 +70,8 @@
   },
   "about": {
     "title": "About the Event",
-    "description": "This year we explore two important topics that impact families in our communities. We invite the community to break the silence surrounding substance-use, suicide, and mental health in our communities. We encourage everyone to learn more about these issues that impact individuals and their families, look for signs that someone needs help and lean on the community supports that are available.",
-    "joinUs": "Join us in person on March 2nd and all week long at events online and across the city.",
+    "description": "This year we explore two important topics that impact families in our communities. We invite you to help us break the silence surrounding substance-use, suicide, and mental health. We encourage everyone to learn more about how these issues impact individuals and their families, look for signs that someone needs help and lean on the community supports that are available",
+    "joinUs": "Join us in person on March 2nd and all week long at activities online and across the city.",
     "mission": "Our Mission",
     "missionText": "To break the stigma surrounding mental health in Black communities by fostering open dialogue, providing information and training, and connecting individuals with culturally-affirming mental health resources and support systems.",
     "why": "Why This Matters",
@@ -90,11 +90,18 @@
       "time": "09:00am - 10:00am",
       "description": "Substance Use and Suicide: Breaking the Silence"
     },
-    "session3": {
-      "title": "Community Expo - Quieter Connections",
-      "time": "10:00am - 04:00pm",
-      "description": "Main Hall - Connecting Caregivers: Information, experts and entertainment. \nRoom 106H - Quieter Connections: Sign up for 1 on 1 peer pupport and system navigation help"
-    },
+"session3": {
+  "title": "Community Expo – Connecting Caregivers",
+  "time": "10:00am - 04:00pm",
+  "description": "Main Hall – Connecting Caregivers: Information, experts and entertainment."
+},
+
+"session3b": {
+  "title": "Quieter Connections",
+  "time": "10:00am - 04:00pm",
+  "description": "Room 106H – Quieter Connections: Sign up for 1 on 1 peer support and system navigation help."
+},
+
     "session4": {
       "title": "Community of Practice - Boardrooms",
       "time": "10:30pm - 03:30pm",
@@ -108,24 +115,24 @@
   },
   "cta": {
     "title": "Ready to Join Us?",
-    "subtitle": "Register for free and be part of the change",
+    "subtitle": "Register for free and be part of conversations",
     "button": "Register on Eventbrite",
     "locationTitle": "Find Us Here"
   },
   "performer": {
     "subtitle": "When Art Becomes Healing",
-    "title": "Black Mental Health Week's 2026 Featured Performer",
+    "title": "Black Mental Health Week's 2026 Featured Artist",
     "description": "Music, dance, storytelling and the creative arts have been linked to culturally-affirming practices in mental health. OBMHC recognizes the important role that the arts have in supporting mental health and wellbeing.",
-    "meet": "Meet Our Performer",
+    "meet": "Meet Our Artist",
     "name": "N'nerjie",
-    "bio": "N'nerjie is a Black queer R&B/Soul singer-songwriter from Toronto who is now based in Ottawa, known for her raw, soulful vocals and storytelling. She has released several EPs and singles since 2017 and won Songwriter of the Year at the Capital Music Awards in 2024 for \"Tug of War\". Her music blends modern sounds with a nostalgic feel, focusing on themes of introspection and healing."
+    "bio": "N’nerjie is an award-winning, Ottawa-based R&B/Soul singer-songwriter. In 2024, she won Songwriter of the Year at the Capital Music Awards for her single “Tug of War.” Having performed at major festivals, including Ottawa Bluesfest, her raw vocals and honest perspectives make her truly one of a kind, creating music that feels like something you’ve always known but are hearing for the first time.\n\nhttps://nnerjie.fanlink.tv/tugofwar"
   },
   "footer": {
-    "tagline": "Together, we break the silence. Together, we heal.",
+    "tagline": "Let's break the silence. We are stronger, together.",
     "contact": "Contact Us",
     "email": "ottawabmhcoalition@gmail.com",
     "rights": "© 2026 Ottawa Black Mental Health Week. All rights reserved.",
-    "credits": "Organized with love by the Ottawa Black community for the Black community.",
+    "credits": "Black Mental Health Week is organized by the community for the community.",
     "developer": "Website design and development by Mahmoud Ibrahim© 2026"
   }
 }
