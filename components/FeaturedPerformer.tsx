@@ -71,7 +71,7 @@ export default function FeaturedPerformer() {
               {/* Column 1: Performer Image */}
               <div className="relative h-80 md:h-auto md:min-h-[360px] rounded-2xl overflow-hidden ring-1 ring-bmhw-gold/40 shadow-xl">
                 <Image
-                  src="/assets/images/nnerjie.jpg"
+                  src="/assets/images/nnerjie-new.jpg"
                   alt={`${t('performer.name')} - ${t('performer.meet')}`}
                   fill
                   className="object-cover scale-105 transition-transform duration-500 ease-out hover:scale-110"
@@ -90,9 +90,17 @@ export default function FeaturedPerformer() {
                 <h4 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 drop-shadow-md">
                   {t('performer.name')}
                 </h4>
-                <p className="text-sm md:text-base lg:text-lg text-stone-200 leading-relaxed drop-shadow-md">
+                <p className="text-sm md:text-base lg:text-lg text-stone-200 leading-relaxed whitespace-pre-line drop-shadow-md">
                   {t('performer.bio')}
                 </p>
+                <a
+                  href="https://nnerjie.fanlink.tv/tugofwar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-bmhw-gold underline hover:text-yellow-400 block mt-4"
+                >
+                  {t('performer.listen')}
+                </a>
               </div>
 
               {/* Column 3: YouTube Video */}
