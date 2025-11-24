@@ -149,7 +149,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1.2 }}
           >
             <a
-              href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1090395364889"
+              href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1847345132019"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold text-bmhw-black px-10 py-4 rounded-full text-lg font-bold shadow-2xl hover:shadow-bmhw-gold/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
