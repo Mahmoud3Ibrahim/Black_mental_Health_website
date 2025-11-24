@@ -60,7 +60,7 @@ export default function ReadyToJoin() {
             </motion.p>
 
             <motion.a
-              href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1090395364889"
+              href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1847345132019"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold text-bmhw-black px-12 md:px-16 py-5 md:py-6 rounded-full text-lg md:text-xl lg:text-2xl font-bold hover:shadow-2xl hover:shadow-bmhw-gold/60 transition-all duration-300 transform hover:scale-105 shadow-xl"
