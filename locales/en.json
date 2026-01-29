@@ -128,6 +128,25 @@
     "bio": "N'nerjie is an award-winning, Ottawa-based R&B/Soul singer-songwriter. In 2024, she won Songwriter of the Year at the Capital Music Awards for her single \"Tug of War.\" Having performed at major festivals, including Ottawa Bluesfest, her raw vocals and honest perspectives make her truly one of a kind, creating music that feels like something you've always known but are hearing for the first time.",
     "listen": "Discover the music"
   },
+  "events": {
+    "title": "Mental Health Week Events",
+    "moreDetails": "More Details",
+    "registerNow": "Register Now",
+    "items": [
+      {
+        "title": "Advancing Culturally Responsive Mental Health Care for Black Communities",
+        "date": "Friday, March 6, 2026",
+        "time": "10:30 AM – 11:30 AM",
+        "venue": "Microsoft Teams",
+        "shortDescription": "Explore ways to strengthen provider capacity to support culturally safe mental health care. Consider how structural factors shape mental health and suicide risk. Discover how local partners are working to reduce barriers and improve access to mental health services.",
+        "bulletPoints": [
+          "Explore ways to strengthen provider capacity to support culturally safe mental health care",
+          "Consider how structural factors shape mental health and suicide risk",
+          "Discover how local partners are working to reduce barriers and improve access to mental health services"
+        ]
+      }
+    ]
+  },
   "footer": {
     "tagline": "Let's break the silence. We are stronger, together.",
     "contact": "Contact Us",

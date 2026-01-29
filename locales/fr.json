@@ -125,6 +125,25 @@
     "bio": "N'nerjie est une autrice-compositrice-interprète noire queer de R&B/Soul originaire de Toronto et maintenant basée à Ottawa, reconnue pour sa voix puissante et ses talents de conteuse. Elle a sorti plusieurs EP et singles depuis 2017 et a remporté en 2024 le prix de l'Auteure-compositrice de l'année aux Capital Music Awards pour \"Tug of War\". Sa musique mêle des sonorités modernes à une touche nostalgique, en mettant l'accent sur l'introspection et la guérison.",
     "listen": "Découvrez la musique"
   },
+  "events": {
+    "title": "Événements de la Semaine de la Santé Mentale",
+    "moreDetails": "Plus de détails",
+    "registerNow": "S'inscrire maintenant",
+    "items": [
+      {
+        "title": "Faire progresser les soins de santé mentale adaptés à la culture pour les communautés noires",
+        "date": "Vendredi, 6 mars 2026",
+        "time": "10 h 30 – 11 h 30",
+        "venue": "Microsoft Teams",
+        "shortDescription": "Explorez des moyens de renforcer la capacité des fournisseurs à offrir des soins de santé mentale culturellement sécuritaires. Examinez comment les facteurs structurels façonnent la santé mentale et le risque de suicide. Découvrez comment les partenaires locaux travaillent à réduire les obstacles et à améliorer l'accès aux services de santé mentale.",
+        "bulletPoints": [
+          "Explorez des moyens de renforcer la capacité des fournisseurs à offrir des soins de santé mentale culturellement sécuritaires",
+          "Examinez comment les facteurs structurels façonnent la santé mentale et le risque de suicide",
+          "Découvrez comment les partenaires locaux travaillent à réduire les obstacles et à améliorer l'accès aux services de santé mentale"
+        ]
+      }
+    ]
+  },
   "footer": {
     "tagline": "Ensemble, nous brisons le silence. Ensemble, nous guérissons.",
     "contact": "Contactez-nous",
