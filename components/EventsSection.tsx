@@ -42,7 +42,7 @@ export default function EventsSection() {
       venue: eventData.venue,
       shortDescription: eventData.shortDescription,
       bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event01.jpg',
+      image: '/assets/images/event01.png',
       registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
     },
     {
@@ -64,7 +64,7 @@ export default function EventsSection() {
       venue: eventData.venue,
       shortDescription: eventData.shortDescription,
       bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event03.jpg',
+      image: '/assets/images/event03.png',
       registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
     },
     {
@@ -75,7 +75,7 @@ export default function EventsSection() {
       venue: eventData.venue,
       shortDescription: eventData.shortDescription,
       bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event04.jpg',
+      image: '/assets/images/event04.png',
       registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
     },
   ];
