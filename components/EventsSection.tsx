@@ -173,16 +173,23 @@ export default function EventsSection() {
               >
                 {/* Event Image - 1/3 of card height */}
                 <div className="relative h-48 md:h-56 overflow-hidden">
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    quality={75}
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    unoptimized={event.id === 1 || event.id === 3}
-                  />
+                  {event.id === 1 || event.id === 3 ? (
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      quality={75}
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black/60 via-transparent to-transparent"></div>
                 </div>
 
@@ -266,15 +273,22 @@ export default function EventsSection() {
 
               {/* Modal Image */}
               <div className="relative h-64 md:h-80 overflow-hidden rounded-t-2xl">
-                <Image
-                  src={selectedEvent.image}
-                  alt={selectedEvent.title}
-                  fill
-                  className="object-cover"
-                  quality={85}
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  unoptimized={selectedEvent.id === 1 || selectedEvent.id === 3}
-                />
+                {selectedEvent.id === 1 || selectedEvent.id === 3 ? (
+                  <img
+                    src={selectedEvent.image}
+                    alt={selectedEvent.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <Image
+                    src={selectedEvent.image}
+                    alt={selectedEvent.title}
+                    fill
+                    className="object-cover"
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, 800px"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black/80 via-bmhw-black/40 to-transparent"></div>
               </div>
 
