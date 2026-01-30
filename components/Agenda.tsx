@@ -108,7 +108,7 @@ export default function Agenda() {
             {t('agenda.title')}
           </h2>
           <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-transparent via-bmhw-gold to-transparent mx-auto mb-4 md:mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto font-semibold drop-shadow-lg px-4">
+          <p className="text-[1.15rem] sm:text-[1.29rem] md:text-[1.44rem] text-stone-200 max-w-3xl mx-auto font-semibold drop-shadow-lg px-4">
             {t('agenda.subtitle')}
           </p>
         </motion.div>
