@@ -82,7 +82,7 @@ export default function Agenda() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/images/conference-hero.jpg"
-          alt="Event Schedule"
+          alt={`${t('agenda.title')} - ${t('agenda.subtitle')}`}
           fill
           className="object-cover object-center"
           quality={60}
