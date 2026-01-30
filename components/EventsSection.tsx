@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import { motion, AnimatePresence, easeOut } from 'framer-motion';
@@ -20,7 +20,7 @@ interface Event {
 export default function EventsSection() {
   const { t } = useTranslation();
   
-  // Get event data from translations
+  // Get event data from translations - memoized to prevent re-creation on every render
   const eventsData = t('events.items', { returnObjects: true }) as Array<{
     title: string;
     date: string;
@@ -32,8 +32,8 @@ export default function EventsSection() {
   
   const eventData = eventsData[0]; // Use first event for all 4 cards temporarily
 
-  // Event data - using the same event for all 4 cards temporarily
-  const events: Event[] = [
+  // Event data - memoized to prevent re-creation on every render
+  const events: Event[] = useMemo(() => [
     {
       id: 1,
       title: eventData.title,
@@ -78,7 +78,7 @@ export default function EventsSection() {
       image: '/assets/images/event04.png',
       registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
     },
-  ];
+  ], [eventData]);
 
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -176,18 +176,21 @@ export default function EventsSection() {
                   {event.id === 1 || event.id === 3 ? (
                     <img
                       src={event.image}
-                      alt={event.title}
+                      alt={`${event.title} - ${event.date} at ${event.venue}`}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <Image
                       src={event.image}
-                      alt={event.title}
+                      alt={`${event.title} - ${event.date} at ${event.venue}`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       quality={75}
-                      loading="lazy"
+                      loading={index < 2 ? "eager" : "lazy"}
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      fetchPriority={index < 2 ? "high" : "low"}
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black/60 via-transparent to-transparent"></div>
@@ -276,17 +279,20 @@ export default function EventsSection() {
                 {selectedEvent.id === 1 || selectedEvent.id === 3 ? (
                   <img
                     src={selectedEvent.image}
-                    alt={selectedEvent.title}
+                    alt={`${selectedEvent.title} - ${selectedEvent.date} at ${selectedEvent.venue}`}
                     className="absolute inset-0 w-full h-full object-cover"
+                    loading="eager"
+                    decoding="async"
                   />
                 ) : (
                   <Image
                     src={selectedEvent.image}
-                    alt={selectedEvent.title}
+                    alt={`${selectedEvent.title} - ${selectedEvent.date} at ${selectedEvent.venue}`}
                     fill
                     className="object-cover"
                     quality={85}
                     sizes="(max-width: 768px) 100vw, 800px"
+                    priority
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black/80 via-bmhw-black/40 to-transparent"></div>
