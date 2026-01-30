@@ -181,6 +181,7 @@ export default function EventsSection() {
                     quality={75}
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    unoptimized={event.id === 1 || event.id === 3}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black/60 via-transparent to-transparent"></div>
                 </div>
@@ -272,6 +273,7 @@ export default function EventsSection() {
                   className="object-cover"
                   quality={85}
                   sizes="(max-width: 768px) 100vw, 800px"
+                  unoptimized={selectedEvent.id === 1 || selectedEvent.id === 3}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black/80 via-bmhw-black/40 to-transparent"></div>
               </div>
