@@ -78,7 +78,7 @@
     "whyText": "Black communities face unique mental health challenges, including racism, systemic barriers to care, stigma, and historical trauma. By addressing substance use, suicide and their impacts openly, we can save lives and build resilient communities."
   },
   "agenda": {
-    "title": "Event Schedule",
+    "title": "Opening day events ",
     "subtitle": "March 2nd, 2026",
     "session1": {
       "title": "Registration and Check-in",
@@ -127,6 +127,49 @@
     "name": "N'nerjie",
     "bio": "N'nerjie is an award-winning, Ottawa-based R&B/Soul singer-songwriter. In 2024, she won Songwriter of the Year at the Capital Music Awards for her single \"Tug of War.\" Having performed at major festivals, including Ottawa Bluesfest, her raw vocals and honest perspectives make her truly one of a kind, creating music that feels like something you've always known but are hearing for the first time.",
     "listen": "Discover the music"
+  },
+  "events": {
+    "title": "Mental Health Week Events",
+    "moreDetails": "More Details",
+    "registerNow": "Register Now",
+    "items": [
+      {
+        "title": "Advancing Culturally Responsive Mental Health Care for Black Communities",
+        "date": "Friday, March 6, 2026",
+        "time": "10:30 AM – 11:30 AM",
+        "venue": "Microsoft Teams",
+        "shortDescription": "Explore ways to strengthen provider capacity to support culturally safe mental health care. Consider how structural factors shape mental health and suicide risk. Discover how local partners are working to reduce barriers and improve access to mental health services.",
+        "bulletPoints": [
+          "Explore ways to strengthen provider capacity to support culturally safe mental health care",
+          "Consider how structural factors shape mental health and suicide risk",
+          "Discover how local partners are working to reduce barriers and improve access to mental health services"
+        ]
+      },
+      {
+        "title": "He Leads Series: The Weight We Carry",
+        "date": "Friday, March 6, 2026",
+        "time": "6:30 PM – 8:30 PM",
+        "venue": "235 Montréal Road, Ottawa, ON K1L 5P8",
+        "shortDescription": "Join the Brotherhood Coalition for the 5th event in their He Leads series. The focus will be on creating a safe and supportive space for Black males to speak about their hidden pressures and pain they carry, while also exploring healthier coping strategies that can support their mental wellbeing. This is a great opportunity to connect and network with each other and share a meal and learn more about the Brotherhood Coalition.",
+        "bulletPoints": [
+          "Create a safe and supportive space for Black males to speak about hidden pressures and pain",
+          "Explore healthier coping strategies that can support mental wellbeing",
+          "Connect and network with each other and share a meal"
+        ]
+      },
+      {
+        "title": "Roots of Care Webinar",
+        "date": "Wednesday, March 4, 2026",
+        "time": "2:00 PM – 3:00 PM",
+        "venue": "Online",
+        "shortDescription": "Join the Ottawa Guiding Council Roots of Care webinar with special guests Chi Opia and Joe Holubowich from Parents' Lifelines of Eastern Ontario (Pleo) to discuss resources for caregivers of children, youth and adults experiencing mental health challenges. Includes new Guiding Council caregiver resources!",
+        "bulletPoints": [
+          "Discuss resources for caregivers of children, youth and adults experiencing mental health challenges",
+          "Learn from special guests Chi Opia and Joe Holubowich from Parents' Lifelines of Eastern Ontario (Pleo)",
+          "Access new Guiding Council caregiver resources"
+        ]
+      }
+    ]
   },
   "footer": {
     "tagline": "Let's break the silence. We are stronger, together.",

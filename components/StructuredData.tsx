@@ -56,6 +56,42 @@ export default function StructuredData() {
     ],
   };
 
+  // Events section structured data
+  const eventsSectionData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Mental Health Week Events',
+    description: 'A series of events focused on advancing culturally responsive mental health care for Black communities',
+    itemListElement: [
+      {
+        '@type': 'Event',
+        name: 'Advancing Culturally Responsive Mental Health Care for Black Communities',
+        description: 'Explore ways to strengthen provider capacity to support culturally safe mental health care. Consider how structural factors shape mental health and suicide risk. Discover how local partners are working to reduce barriers and improve access to mental health services.',
+        startDate: '2026-03-06T10:30:00-05:00',
+        endDate: '2026-03-06T11:30:00-05:00',
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+        location: {
+          '@type': 'VirtualLocation',
+          name: 'Microsoft Teams',
+          url: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
+        },
+        organizer: {
+          '@type': 'Organization',
+          name: 'Ottawa Black Mental Health Coalition',
+        },
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'CAD',
+          availability: 'https://schema.org/InStock',
+          url: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
+        },
+        inLanguage: ['en-CA', 'fr-CA'],
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -65,6 +101,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsSectionData) }}
       />
     </>
   );
