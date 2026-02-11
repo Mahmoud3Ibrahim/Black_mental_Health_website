@@ -103,7 +103,7 @@ export default function WeAreWaitingYou() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Main Carousel */}
           <div className="relative w-full aspect-[2000/1428] max-h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-bmhw-black/50">
@@ -116,9 +116,9 @@ export default function WeAreWaitingYou() {
                 animate="center"
                 exit="exit"
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.5 },
-                  scale: { duration: 0.5 }
+                  x: { type: "spring", stiffness: 400, damping: 35 },
+                  opacity: { duration: 0.3 },
+                  scale: { duration: 0.3 }
                 }}
                 className="absolute inset-0"
               >

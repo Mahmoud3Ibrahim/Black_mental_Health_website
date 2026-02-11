@@ -29,56 +29,33 @@ export default function EventsSection() {
     shortDescription: string;
     bulletPoints: string[];
   }>;
-  
-  const eventData = eventsData[0]; // Use first event for all 4 cards temporarily
 
   // Event data - memoized to prevent re-creation on every render
-  const events: Event[] = useMemo(() => [
-    {
-      id: 1,
-      title: eventData.title,
-      date: eventData.date,
-      time: eventData.time,
-      venue: eventData.venue,
-      shortDescription: eventData.shortDescription,
-      bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event01.png',
-      registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
-    },
-    {
-      id: 2,
-      title: eventData.title,
-      date: eventData.date,
-      time: eventData.time,
-      venue: eventData.venue,
-      shortDescription: eventData.shortDescription,
-      bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event02.png',
-      registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
-    },
-    {
-      id: 3,
-      title: eventData.title,
-      date: eventData.date,
-      time: eventData.time,
-      venue: eventData.venue,
-      shortDescription: eventData.shortDescription,
-      bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event03.png',
-      registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
-    },
-    {
-      id: 4,
-      title: eventData.title,
-      date: eventData.date,
-      time: eventData.time,
-      venue: eventData.venue,
-      shortDescription: eventData.shortDescription,
-      bulletPoints: eventData.bulletPoints,
-      image: '/assets/images/event04.png',
-      registerLink: 'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
-    },
-  ], [eventData]);
+  const events: Event[] = useMemo(() => {
+    const allEventsData = eventsData;
+    const registerLinks = [
+      'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
+      'https://www.eventbrite.ca/e/the-brotherhood-coalitions-he-leads-vol-5-the-weight-we-carry-tickets-1982848995723',
+      'https://us06web.zoom.us/webinar/register/WN_b2hNWsFrTQCBe2NuHlnJtQ#/registration',
+    ];
+    const images = [
+      '/assets/images/event01.png',
+      '/assets/images/event02.png',
+      '/assets/images/event03.png',
+    ];
+
+    return allEventsData.map((event, index) => ({
+      id: index + 1,
+      title: event.title,
+      date: event.date,
+      time: event.time,
+      venue: event.venue,
+      shortDescription: event.shortDescription,
+      bulletPoints: event.bulletPoints,
+      image: images[index],
+      registerLink: registerLinks[index],
+    }));
+  }, [eventsData]);
 
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -145,7 +122,7 @@ export default function EventsSection() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: easeOut }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-bmhw-gold mb-4 drop-shadow-2xl">
               {t('events.title')}
@@ -155,20 +132,20 @@ export default function EventsSection() {
 
           {/* Events Grid */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: easeOut }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
             {events.map((event, index) => (
               <motion.div
                 key={event.id}
-                className="bg-bmhw-brown/40 backdrop-blur-md rounded-2xl border border-bmhw-gold/30 overflow-hidden shadow-xl hover:shadow-[0_0_25px_rgba(207,163,73,0.4)] transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 cursor-pointer group"
-                initial={{ opacity: 0, y: 20 }}
+                className="bg-bmhw-brown/40 backdrop-blur-sm rounded-2xl border border-bmhw-gold/30 overflow-hidden shadow-xl hover:shadow-[0_0_25px_rgba(207,163,73,0.4)] transition-all duration-200 ease-out transform hover:scale-[1.02] hover:-translate-y-1 cursor-pointer group will-change-transform"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.3, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
                 onClick={() => openModal(event)}
               >
                 {/* Event Image - 1/3 of card height */}
@@ -177,7 +154,7 @@ export default function EventsSection() {
                     <img
                       src={event.image}
                       alt={`${event.title} - ${event.date} at ${event.venue}`}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-110 will-change-transform"
                       loading="lazy"
                       decoding="async"
                     />
@@ -186,7 +163,7 @@ export default function EventsSection() {
                       src={event.image}
                       alt={`${event.title} - ${event.date} at ${event.venue}`}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-110 will-change-transform"
                       quality={75}
                       loading={index < 2 ? "eager" : "lazy"}
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -207,10 +184,10 @@ export default function EventsSection() {
                   <p className="text-white text-sm md:text-base leading-relaxed mb-4 line-clamp-2">
                     {event.shortDescription}
                   </p>
-                  <button className="text-bmhw-gold font-semibold hover:text-yellow-400 transition-colors duration-200 flex items-center gap-2 group/button">
+                  <button className="text-bmhw-gold font-semibold hover:text-yellow-400 transition-colors duration-150 ease-out flex items-center gap-2 group/button">
                     {t('events.moreDetails')}
                     <svg
-                      className="w-4 h-4 transition-transform duration-200 group-hover/button:translate-x-1"
+                      className="w-4 h-4 transition-transform duration-150 ease-out group-hover/button:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -238,7 +215,7 @@ export default function EventsSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             onClick={closeModal}
           >
             {/* Backdrop */}
@@ -246,17 +223,17 @@ export default function EventsSection() {
 
             {/* Modal Content */}
             <motion.div
-              className="relative bg-bmhw-brown/95 backdrop-blur-md border-2 border-bmhw-gold/50 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative bg-bmhw-brown/95 backdrop-blur-sm border-2 border-bmhw-gold/50 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ duration: 0.3, ease: easeOut }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-bmhw-gold/20 hover:bg-bmhw-gold/40 rounded-full transition-all duration-200 group"
+                className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-bmhw-gold/20 hover:bg-bmhw-gold/40 rounded-full transition-all duration-150 ease-out group"
                 aria-label="Close modal"
               >
                 <svg
@@ -332,7 +309,7 @@ export default function EventsSection() {
                     href={selectedEvent.registerLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold text-bmhw-black px-8 py-4 rounded-full text-lg font-bold shadow-2xl hover:shadow-bmhw-gold/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                    className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold text-bmhw-black px-8 py-4 rounded-full text-lg font-bold shadow-2xl hover:shadow-bmhw-gold/50 transition-all duration-200 ease-out transform hover:scale-105 hover:-translate-y-1 will-change-transform"
                   >
                     {t('events.registerNow')}
                   </a>

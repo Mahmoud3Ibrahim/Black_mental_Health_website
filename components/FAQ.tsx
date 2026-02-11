@@ -116,7 +116,7 @@ export default function FAQ() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: cubicBezier(0.4, 0, 0.2, 1)
       }
     }
@@ -146,7 +146,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-bmhw-gold mb-3">
             {t('faq.title')}

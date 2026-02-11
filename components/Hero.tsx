@@ -81,7 +81,7 @@ export default function Hero() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
+            transition={{ duration: 0.8, delay: 0.2, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
           >
             {mounted ? t('hero.title') : 'Ottawa Black Mental Health Week 2026'}
           </motion.h1>
@@ -90,7 +90,7 @@ export default function Hero() {
             className="inline-block bg-gradient-to-r from-bmhw-gold via-yellow-500 to-bmhw-gold px-6 py-2 sm:px-8 sm:py-3 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.6, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
+            transition={{ duration: 0.6, delay: 0.4, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
           >
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-bmhw-black italic drop-shadow-sm">
               {mounted ? t('hero.subtitle') : 'Substance Use and Suicide: Breaking the Silence'}
@@ -102,7 +102,7 @@ export default function Hero() {
             className="max-w-lg mx-auto mt-3 bg-red-900/85 backdrop-blur-md border-2 border-red-400/70 px-3 py-2 rounded-xl shadow-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6, ease: easeOut }}
+            transition={{ duration: 0.4, delay: 0.4, ease: easeOut }}
           >
             <h3 className="text-bmhw-gold font-bold text-sm sm:text-base mb-1 text-center flex items-center justify-center gap-1.5">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -122,7 +122,7 @@ export default function Hero() {
             className="space-y-2 mt-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
           >
             <p className="text-base sm:text-lg md:text-xl text-bmhw-gold font-bold drop-shadow-lg text-center leading-tight">
               {mounted ? t('hero.date') : 'Monday, March 2nd, 2026 • 9:00 AM - 5:00 PM'}
@@ -137,7 +137,7 @@ export default function Hero() {
             className="text-sm sm:text-base md:text-lg text-stone-200 max-w-3xl mx-auto mt-3 leading-relaxed drop-shadow-lg px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
           >
             {mounted ? t('hero.description') : 'Join us for a week of Black mental health and wellness events featuring powerful keynotes, panels, workshops, training and community connection.'}
           </motion.p>
@@ -146,7 +146,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-3 justify-center items-center mt-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            transition={{ duration: 0.4, delay: 0.7 }}
           >
             <a
               href="https://www.eventbrite.ca/e/ottawa-black-mental-health-week-2026-tickets-1847345132019"

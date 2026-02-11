@@ -32,7 +32,7 @@ export default function FeaturedPerformer() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.8, ease: easeOut }}
+        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       >
         {/* Header Section */}
         <motion.div
@@ -40,7 +40,7 @@ export default function FeaturedPerformer() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
+          transition={{ duration: 0.5, ease: cubicBezier(0.25, 0.1, 0.25, 1) }}
         >
           <p className="text-lg md:text-xl lg:text-2xl text-bmhw-gold italic font-semibold mb-2 drop-shadow-lg px-4">
             {t('performer.subtitle')}
@@ -64,7 +64,7 @@ export default function FeaturedPerformer() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
         >
           <div className="bg-bmhw-brown/60 backdrop-blur-lg rounded-2xl border-2 border-bmhw-gold/40 shadow-2xl hover:shadow-bmhw-gold/30 transition-all duration-300 p-4 md:p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
