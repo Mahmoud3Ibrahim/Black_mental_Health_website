@@ -37,11 +37,13 @@ export default function EventsSection() {
       'https://forms.office.com/pages/responsepage.aspx?id=TpCCSqK9H0GJv8J47HmG0YZMu86KmyFLqItqcdxBWBtUNlM0TjhETVQ1Mk5QTjA0N1A3NEEzOVgyMC4u&route=shorturl',
       'https://www.eventbrite.ca/e/the-brotherhood-coalitions-he-leads-vol-5-the-weight-we-carry-tickets-1982848995723',
       'https://us06web.zoom.us/webinar/register/WN_b2hNWsFrTQCBe2NuHlnJtQ#/registration',
+      'https://www.eventbrite.ca/e/1982990661449?aff=oddtdtcreator',
     ];
     const images = [
       '/assets/images/event01.png',
       '/assets/images/event02.png',
       '/assets/images/event03.png',
+      '/assets/images/event04.png',
     ];
 
     return allEventsData.map((event, index) => ({
@@ -132,7 +134,7 @@ export default function EventsSection() {
 
           {/* Events Grid */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
