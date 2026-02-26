@@ -38,12 +38,14 @@ export default function EventsSection() {
       'https://www.eventbrite.ca/e/the-brotherhood-coalitions-he-leads-vol-5-the-weight-we-carry-tickets-1982848995723',
       'https://us06web.zoom.us/webinar/register/WN_b2hNWsFrTQCBe2NuHlnJtQ#/registration',
       'https://www.eventbrite.ca/e/1982990661449?aff=oddtdtcreator',
+      'https://forms.office.com/pages/responsepage.aspx?id=tMO_YYVQ_06MPaPnvXWlEItFbheq8_dBtYikD1ONIxFURVJMQTRTQzczS1M0QkQ1OUxGWkFZQUMwQy4u&origin=QRCode&route=shorturl',
     ];
     const images = [
       '/assets/images/event01.png',
       '/assets/images/event02.png',
       '/assets/images/event03.png',
       '/assets/images/event04.png',
+      '/assets/images/event05.png',
     ];
 
     return allEventsData.map((event, index) => ({
@@ -143,7 +145,7 @@ export default function EventsSection() {
             {events.map((event, index) => (
               <motion.div
                 key={event.id}
-                className="bg-bmhw-brown/40 backdrop-blur-sm rounded-2xl border border-bmhw-gold/30 overflow-hidden shadow-xl hover:shadow-[0_0_25px_rgba(207,163,73,0.4)] transition-all duration-200 ease-out transform hover:scale-[1.02] hover:-translate-y-1 cursor-pointer group will-change-transform"
+                className={`bg-bmhw-brown/40 backdrop-blur-sm rounded-2xl border border-bmhw-gold/30 overflow-hidden shadow-xl hover:shadow-[0_0_25px_rgba(207,163,73,0.4)] transition-all duration-200 ease-out transform hover:scale-[1.02] hover:-translate-y-1 cursor-pointer group will-change-transform ${event.id === 5 ? 'md:col-span-2 md:justify-self-center md:max-w-md' : ''}`}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}

@@ -180,6 +180,18 @@
           "The event will include a film screening followed by a panel discussion featuring community voices and experts",
           "This event is open to students, professionals, community members, and anyone interested in mental health, storytelling, and community dialogue"
         ]
+      },
+      {
+        "title": "Give Knowledge, Gain Power: Women & HIV Wellness",
+        "date": "March 8, 2026",
+        "time": "12:00 PM – 7:00 PM",
+        "venue": "19 Main Street",
+        "shortDescription": "This community gathering is focused on breaking the silence around HIV, substance use, stigma, and suicide. Women deserve support without judgment and spaces where substance use, mental health, and suicide are addressed with compassion rather than stigma.",
+        "bulletPoints": [
+          "Breaking the silence around HIV, substance use, stigma, and suicide",
+          "Bringing together healthcare professionals, advocates, and community leaders to share practical information and real conversations",
+          "A meal will be provided, and the environment will be welcoming, inclusive, and grounded in dignity and respect"
+        ]
       }
     ]
   },
