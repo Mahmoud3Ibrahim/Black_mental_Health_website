@@ -9,6 +9,13 @@
     "agenda": "Programme",
     "register": "S'inscrire"
   },
+  "thankYou": {
+    "title": "Semaine de la Santé Mentale des Noirs d'Ottawa 2026",
+    "subtitle": "Un voyage de connexion : C'était merveilleux de vous avoir parmi nous !",
+    "paragraph": "C'était vraiment merveilleux de vous avoir parmi nous pour la Semaine de la santé mentale des Noirs d'Ottawa 2026. Votre présence, votre engagement et votre soutien ont fait de cette semaine un voyage incroyable de guérison, de résilience et de connexion.",
+    "prevImage": "Image précédente",
+    "nextImage": "Image suivante"
+  },
   "hero": {
     "title": "Semaine de la Santé Mentale des Noirs d'Ottawa 2026",
     "subtitle": "Usage de substances et suicide : Briser le silence",

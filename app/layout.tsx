@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import StructuredData from '@/components/StructuredData';
+import I18nProvider from '@/components/I18nProvider';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -85,7 +86,9 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://bmhw2026.vercel.app" />
         <StructuredData />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <I18nProvider>{children}</I18nProvider>
+      </body>
     </html>
   );
 }
