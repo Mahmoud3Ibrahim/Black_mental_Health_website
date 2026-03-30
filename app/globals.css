@@ -157,4 +157,26 @@ section:last-of-type::after {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Subtle pulse on podcast thumbnail CTA (shadow only — no transform conflict with centering) */
+  .animate-podcast-cta-pulse {
+    animation: podcast-cta-pulse 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes podcast-cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 16px rgba(207, 163, 73, 0.45);
+  }
+  50% {
+    box-shadow: 0 10px 28px rgba(207, 163, 73, 0.72);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-podcast-cta-pulse {
+    animation: none;
+    box-shadow: 0 4px 16px rgba(207, 163, 73, 0.45);
+  }
 }

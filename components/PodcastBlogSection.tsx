@@ -7,6 +7,10 @@ import { useTranslation } from 'react-i18next';
 const YOUTUBE_EMBED = 'https://www.youtube.com/embed/euDGwRehUb0';
 const THOUGHTFUL_THERAPIST_URL = 'https://www.thoughtfultherapist.ca';
 
+/** Intrinsic dimensions of blog01.png — avoids letterboxing from fixed aspect + object-contain */
+const BLOG01_WIDTH = 682;
+const BLOG01_HEIGHT = 387;
+
 export default function PodcastBlogSection() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -35,7 +39,7 @@ export default function PodcastBlogSection() {
 
   return (
     <>
-      <section className="relative py-12 sm:py-14 md:py-16 lg:py-20 overflow-hidden">
+      <section className="relative py-6 sm:py-8 md:py-10 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
             src="/assets/images/faq-hero.jpg"
@@ -48,40 +52,54 @@ export default function PodcastBlogSection() {
           <div className="absolute inset-0 bg-gradient-to-br from-bmhw-black/80 via-bmhw-black/75 to-bmhw-brown/55" />
         </div>
 
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] items-center">
-            <button
-              type="button"
-              onClick={() => setOpen(true)}
-              className="relative aspect-video w-full max-w-md mx-auto md:mx-0 rounded-2xl overflow-hidden ring-2 ring-bmhw-gold/50 shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-bmhw-gold/70 group"
-              aria-label={t('podcast.openVideo')}
-            >
-              <Image
-                src="/assets/images/blog01.png"
-                alt={t('podcast.thumbnailAlt')}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                sizes="(max-width: 768px) 100vw, 480px"
-              />
-              <span className="absolute inset-0 flex items-center justify-center bg-bmhw-black/35 group-hover:bg-bmhw-black/25 transition-colors">
-                <span className="rounded-full bg-bmhw-gold text-bmhw-black px-5 py-2.5 font-bold text-sm sm:text-base shadow-lg">
-                  {t('podcast.listen')}
-                </span>
-              </span>
-            </button>
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8">
+          {/* Frame aligned with ThankYouPage photo slider (inner track) */}
+          <div className="relative rounded-3xl overflow-hidden bg-bmhw-black/50 shadow-2xl ring-2 ring-bmhw-gold/40 p-3 sm:p-5 md:p-6">
+            <div className="absolute inset-0 rounded-3xl shadow-[0_0_60px_rgba(207,163,73,0.3)] pointer-events-none" aria-hidden />
 
-            <div className="text-center md:text-left space-y-4">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white leading-snug drop-shadow-lg">
+            <div className="relative z-10 text-center space-y-3 sm:space-y-5">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-extrabold text-white leading-tight drop-shadow-lg px-1 sm:px-0 tracking-tight">
                 {t('podcast.title')}
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-stone-200 leading-relaxed">
-                {t('podcast.description')}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start pt-1">
+
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="relative block w-full max-w-none mx-auto cursor-pointer rounded-2xl overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bmhw-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-bmhw-black/50 group"
+                aria-label={t('podcast.openVideo')}
+              >
+                <span className="relative block w-full">
+                  <Image
+                    src="/assets/images/blog01.png"
+                    width={BLOG01_WIDTH}
+                    height={BLOG01_HEIGHT}
+                    alt={t('podcast.thumbnailAlt')}
+                    className="w-full h-auto block rounded-2xl transition-transform duration-300 group-hover:scale-[1.01]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                  />
+                  <span
+                    className="pointer-events-none absolute inset-0 rounded-2xl bg-bmhw-black/25 transition-colors group-hover:bg-bmhw-black/15"
+                    aria-hidden
+                  />
+                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
+                    <span className="inline-flex items-center justify-center rounded-full bg-bmhw-gold px-5 py-2 font-bold text-sm text-bmhw-black shadow-lg sm:px-6 sm:py-2.5 sm:text-base animate-podcast-cta-pulse">
+                      {t('podcast.listen')}
+                    </span>
+                  </span>
+                </span>
+              </button>
+
+              <div className="mx-auto max-w-3xl rounded-2xl border border-bmhw-gold/25 bg-bmhw-black/40 px-3 py-3 text-left sm:px-6 sm:py-4 sm:text-center">
+                <p className="text-sm sm:text-base md:text-lg leading-[1.6] text-stone-200">
+                  {t('podcast.description')}
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:justify-center sm:gap-4">
                 <button
                   type="button"
                   onClick={() => setOpen(true)}
-                  className="inline-flex items-center justify-center rounded-full bg-bmhw-gold text-bmhw-black px-8 py-3 font-bold hover:bg-yellow-400 transition-all shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center justify-center rounded-full bg-bmhw-gold px-8 py-3 text-base font-bold text-bmhw-black shadow-lg transition-all duration-200 ease-out hover:scale-105 hover:brightness-95 active:scale-100"
                 >
                   {t('podcast.listen')}
                 </button>
@@ -89,7 +107,7 @@ export default function PodcastBlogSection() {
                   href={THOUGHTFUL_THERAPIST_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border-2 border-bmhw-gold text-bmhw-gold px-8 py-3 font-bold hover:bg-bmhw-gold/10 transition-all"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-bmhw-gold bg-transparent px-8 py-3 text-base font-bold text-bmhw-gold transition-all duration-200 ease-out hover:bg-bmhw-gold hover:text-bmhw-black active:scale-[0.98]"
                 >
                   {t('podcast.thoughtfulTherapist')}
                 </a>
