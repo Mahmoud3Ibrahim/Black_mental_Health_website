@@ -16,6 +16,16 @@
     "prevImage": "Previous image",
     "nextImage": "Next image"
   },
+  "podcast": {
+    "title": "OBMHC - Thoughtful Therapist BMHW Collaboration PODCAST",
+    "description": "Substance Use, Suicide, and the Healing Power of Honest Conversation. A special Black Mental Health Week episode with the Thoughtful Therapist, Papa-Ladjiké and N'nerjie.",
+    "listen": "Listen",
+    "thoughtfulTherapist": "Thoughtful Therapist",
+    "closeModal": "Close video",
+    "modalTitle": "OBMHC - Thoughtful Therapist BMHW Collaboration PODCAST",
+    "openVideo": "Open podcast video",
+    "thumbnailAlt": "Thoughtful Therapist podcast episode thumbnail"
+  },
   "hero": {
     "title": "Ottawa Black Mental Health Week 2026",
     "subtitle": "Substance Use and Suicide: Breaking the Silence",

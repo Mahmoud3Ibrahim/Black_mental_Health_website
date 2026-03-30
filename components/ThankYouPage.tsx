@@ -38,7 +38,7 @@ export default function ThankYouPage() {
     : '/assets/logos/obmh-en.png';
 
   return (
-    <section className="relative h-screen flex flex-col overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background - hero.jpg */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image

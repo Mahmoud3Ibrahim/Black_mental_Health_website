@@ -16,6 +16,16 @@
     "prevImage": "Image précédente",
     "nextImage": "Image suivante"
   },
+  "podcast": {
+    "title": "OBMHC - Collaboration PODCAST Thoughtful Therapist et la SMNO",
+    "description": "Usage de substances, suicide et pouvoir de guérison d'une conversation honnête. Un épisode spécial de la Semaine de la santé mentale des Noirs avec Thoughtful Therapist, Papa-Ladjiké et N'nerjie.",
+    "listen": "Écouter",
+    "thoughtfulTherapist": "Thoughtful Therapist",
+    "closeModal": "Fermer la vidéo",
+    "modalTitle": "OBMHC - Collaboration PODCAST Thoughtful Therapist et la SMNO",
+    "openVideo": "Ouvrir la vidéo du balado",
+    "thumbnailAlt": "Vignette de l'épisode du balado Thoughtful Therapist"
+  },
   "hero": {
     "title": "Semaine de la Santé Mentale des Noirs d'Ottawa 2026",
     "subtitle": "Usage de substances et suicide : Briser le silence",
