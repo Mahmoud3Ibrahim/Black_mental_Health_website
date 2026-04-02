@@ -7,23 +7,22 @@ import Footer from '@/components/Footer';
 const PODCAST_DESCRIPTION =
   "A Black Mental Health Week conversation with Podcaster Myriam of the Thoughtful Therapist on substance use, suicide, and intergenerational trauma with bilingual psychotherapist Papa-Ladjiké and N'nerjie.";
 
+const SITE_TITLE = 'Ottawa Black Mental Health Week';
+
 export const metadata: Metadata = {
   title: {
-    absolute:
-      'Substance Use, Suicide & Intergenerational Trauma | Black Mental Health Week | Thoughtful Therapist',
+    absolute: SITE_TITLE,
   },
   description: PODCAST_DESCRIPTION,
   openGraph: {
-    title:
-      'Substance Use, Suicide & Intergenerational Trauma | Black Mental Health Week | Thoughtful Therapist',
+    title: SITE_TITLE,
     description: PODCAST_DESCRIPTION,
     url: 'https://bmhw2026.vercel.app',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title:
-      'Substance Use, Suicide & Intergenerational Trauma | Black Mental Health Week | Thoughtful Therapist',
+    title: SITE_TITLE,
     description: PODCAST_DESCRIPTION,
   },
 };
