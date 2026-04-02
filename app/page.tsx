@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ThankYouPage from '@/components/ThankYouPage';
 import PodcastBlogSection from '@/components/PodcastBlogSection';
+import FeaturedPerformer from '@/components/FeaturedPerformer';
 import Footer from '@/components/Footer';
 
 const PODCAST_DESCRIPTION =
@@ -32,6 +33,7 @@ export default function Home() {
     <main className="min-h-screen">
       <ThankYouPage />
       <PodcastBlogSection />
+      <FeaturedPerformer />
       <Footer />
     </main>
   );

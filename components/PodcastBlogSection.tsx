@@ -66,7 +66,7 @@ export default function PodcastBlogSection() {
                 type="button"
                 onClick={() => setOpen(true)}
                 className="relative block w-full max-w-none mx-auto cursor-pointer rounded-2xl overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bmhw-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-bmhw-black/50 group"
-                aria-label={t('podcast.openVideo')}
+                aria-label={t('podcast.watchOnYoutube')}
               >
                 <span className="relative block w-full">
                   <Image
@@ -81,9 +81,9 @@ export default function PodcastBlogSection() {
                     className="pointer-events-none absolute inset-0 rounded-2xl bg-bmhw-black/25 transition-colors group-hover:bg-bmhw-black/15"
                     aria-hidden
                   />
-                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-                    <span className="inline-flex items-center justify-center rounded-full bg-bmhw-gold px-5 py-2 font-bold text-sm text-bmhw-black shadow-lg sm:px-6 sm:py-2.5 sm:text-base animate-podcast-cta-pulse">
-                      {t('podcast.listen')}
+                  <span className="pointer-events-none absolute left-1/2 top-1/2 z-10 max-w-[90%] -translate-x-1/2 -translate-y-1/2">
+                    <span className="inline-flex items-center justify-center rounded-full bg-bmhw-gold px-3 py-2 text-center text-xs font-bold leading-tight text-bmhw-black shadow-lg sm:px-5 sm:py-2.5 sm:text-sm md:text-base animate-podcast-cta-pulse">
+                      {t('podcast.watchOnYoutube')}
                     </span>
                   </span>
                 </span>
@@ -101,7 +101,7 @@ export default function PodcastBlogSection() {
                   onClick={() => setOpen(true)}
                   className="inline-flex items-center justify-center rounded-full bg-bmhw-gold px-8 py-3 text-base font-bold text-bmhw-black shadow-lg transition-all duration-200 ease-out hover:scale-105 hover:brightness-95 active:scale-100"
                 >
-                  {t('podcast.listen')}
+                  {t('podcast.watchOnYoutube')}
                 </button>
                 <a
                   href={THOUGHTFUL_THERAPIST_URL}
