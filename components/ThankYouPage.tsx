@@ -37,7 +37,9 @@ export default function ThankYouPage() {
     const strip = dotStripRef.current;
     if (!strip) return;
     const active = strip.querySelector<HTMLElement>('[data-dot-active="true"]');
-    active?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+    if (!active) return;
+    const target = active.offsetLeft - strip.clientWidth / 2 + active.clientWidth / 2;
+    strip.scrollTo({ left: target, behavior: 'smooth' });
   }, [currentIndex]);
 
   // Warm the browser cache for the next slide so transitions are instant.
