@@ -14,7 +14,8 @@
     "subtitle": "Un voyage de connexion : C'était merveilleux de vous avoir parmi nous !",
     "paragraph": "C'était vraiment merveilleux de vous avoir parmi nous pour la Semaine de la santé mentale des Noirs d'Ottawa 2026. Votre présence, votre engagement et votre soutien ont fait de cette semaine un voyage incroyable de guérison, de résilience et de connexion.",
     "prevImage": "Image précédente",
-    "nextImage": "Image suivante"
+    "nextImage": "Image suivante",
+    "slideIndicator": "Diapositive {{current}} sur {{total}}"
   },
   "podcast": {
     "title": "OBMHC - Collaboration PODCAST Thoughtful Therapist et la SMNO",
@@ -141,7 +142,9 @@
     "meet": "Découvrez notre artiste",
     "name": "N'nerjie",
     "bio": "N'nerjie est une autrice-compositrice-interprète noire queer de R&B/Soul originaire de Toronto et maintenant basée à Ottawa, reconnue pour sa voix puissante et ses talents de conteuse. Elle a sorti plusieurs EP et singles depuis 2017 et a remporté en 2024 le prix de l'Auteure-compositrice de l'année aux Capital Music Awards pour \"Tug of War\". Sa musique mêle des sonorités modernes à une touche nostalgique, en mettant l'accent sur l'introspection et la guérison.",
-    "listen": "Découvrez la musique"
+    "listen": "Découvrez la musique",
+    "playVideo": "Lire la vidéo",
+    "videoTitle": "Vidéo de l'artiste vedette"
   },
   "events": {
     "title": "Événements de la Semaine de la Santé Mentale",

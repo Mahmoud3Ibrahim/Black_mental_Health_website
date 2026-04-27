@@ -1,11 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { motion, easeOut, cubicBezier } from 'framer-motion';
+import { motion, cubicBezier } from 'framer-motion';
+
+const YOUTUBE_VIDEO_ID = 'nMPtgrFFbYM';
+const YOUTUBE_EMBED = `https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}`;
+const YOUTUBE_THUMB = `https://i.ytimg.com/vi/${YOUTUBE_VIDEO_ID}/hqdefault.jpg`;
 
 export default function FeaturedPerformer() {
   const { t } = useTranslation();
+  const [videoReady, setVideoReady] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-16">
@@ -69,12 +75,12 @@ export default function FeaturedPerformer() {
           <div className="bg-bmhw-brown/60 backdrop-blur-lg rounded-2xl border-2 border-bmhw-gold/40 shadow-2xl hover:shadow-bmhw-gold/30 transition-all duration-300 p-4 md:p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
               {/* Column 1: Performer Image */}
-              <div className="relative h-80 md:h-auto md:min-h-[360px] rounded-2xl overflow-hidden ring-1 ring-bmhw-gold/40 shadow-xl">
+              <div className="relative h-80 md:h-auto md:min-h-[360px] overflow-hidden rounded-2xl ring-1 ring-bmhw-gold/40 shadow-xl">
                 <Image
                   src="/assets/images/nnerjie-new.jpg"
                   alt={`${t('performer.name')} - ${t('performer.meet')}`}
                   fill
-                  className="object-cover scale-105 transition-transform duration-500 ease-out hover:scale-110"
+                  className="object-cover transition-transform duration-500 ease-out hover:scale-[1.02]"
                   quality={80}
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -103,15 +109,42 @@ export default function FeaturedPerformer() {
                 </a>
               </div>
 
-              {/* Column 3: YouTube Video */}
-              <div className="relative rounded-2xl overflow-hidden shadow-xl ring-2 ring-bmhw-gold/50 hover:ring-bmhw-gold transition-all duration-300 h-80 md:h-auto md:min-h-[360px] bg-black/60">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/nMPtgrFFbYM"
-                  title="Featured Performer Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+              {/* Column 3: YouTube — facade until user taps (saves ~500KB+ JS/CSS on initial load) */}
+              <div className="relative h-80 overflow-hidden rounded-2xl bg-black/60 shadow-xl ring-2 ring-bmhw-gold/50 transition-all duration-300 hover:ring-bmhw-gold md:h-auto md:min-h-[360px]">
+                {videoReady ? (
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src={`${YOUTUBE_EMBED}?rel=0`}
+                    title={t('performer.videoTitle')}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <>
+                    <Image
+                      src={YOUTUBE_THUMB}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-bmhw-black/45" aria-hidden />
+                    <button
+                      type="button"
+                      onClick={() => setVideoReady(true)}
+                      className="absolute inset-0 z-10 flex items-center justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-bmhw-gold/80"
+                      aria-label={t('performer.playVideo')}
+                    >
+                      <span className="flex items-center gap-2 rounded-full bg-bmhw-gold px-5 py-3 text-sm font-bold text-bmhw-black shadow-xl transition-transform hover:scale-105 sm:px-6 sm:text-base">
+                        <svg className="h-8 w-8 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                        {t('performer.playVideo')}
+                      </span>
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

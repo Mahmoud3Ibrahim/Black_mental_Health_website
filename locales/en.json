@@ -14,7 +14,8 @@
     "subtitle": "A Journey of Connection: It Was Wonderful Having You With Us!",
     "paragraph": "It was truly wonderful having you with us for Ottawa Black Mental Health Week 2026. Your presence, engagement, and support made this week an incredible journey of healing, resilience, and connection.",
     "prevImage": "Previous image",
-    "nextImage": "Next image"
+    "nextImage": "Next image",
+    "slideIndicator": "Slide {{current}} of {{total}}"
   },
   "podcast": {
     "title": "OBMHC - Thoughtful Therapist BMHW Collaboration PODCAST",
@@ -144,7 +145,9 @@
     "meet": "Meet Our Artist",
     "name": "N'nerjie",
     "bio": "N'nerjie is an award-winning, Ottawa-based R&B/Soul singer-songwriter. In 2024, she won Songwriter of the Year at the Capital Music Awards for her single \"Tug of War.\" Having performed at major festivals, including Ottawa Bluesfest, her raw vocals and honest perspectives make her truly one of a kind, creating music that feels like something you've always known but are hearing for the first time.",
-    "listen": "Discover the music"
+    "listen": "Discover the music",
+    "playVideo": "Play video",
+    "videoTitle": "Featured performer video"
   },
   "events": {
     "title": "Mental Health Week Events",

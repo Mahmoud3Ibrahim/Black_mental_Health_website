@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,6 +19,7 @@ export default function ThankYouPage() {
   const [mounted, setMounted] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const dotStripRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -31,6 +32,38 @@ export default function ThankYouPage() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const strip = dotStripRef.current;
+    if (!strip) return;
+    const active = strip.querySelector<HTMLElement>('[data-dot-active="true"]');
+    active?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+  }, [currentIndex]);
+
+  // Warm the browser cache for the next slide so transitions are instant.
+  // Picks the deviceSize most likely to be requested by next/image at this viewport.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const w =
+      window.innerWidth >= 1200 ? 1200 :
+      window.innerWidth >= 1024 ? 1080 :
+      window.innerWidth >= 768 ? 828 : 750;
+    const targets = [
+      (currentIndex + 1) % sliderImages.length,
+      (currentIndex - 1 + sliderImages.length) % sliderImages.length,
+    ];
+    const imgs = targets.map((i) => {
+      const img = new window.Image();
+      img.decoding = 'async';
+      img.src = `/_next/image?url=${encodeURIComponent(sliderImages[i])}&w=${w}&q=72`;
+      return img;
+    });
+    return () => {
+      imgs.forEach((img) => {
+        img.src = '';
+      });
+    };
+  }, [currentIndex]);
 
   const currentLang = mounted ? i18n.language : 'en';
   const logoSrc = currentLang === 'fr'
@@ -47,9 +80,9 @@ export default function ThankYouPage() {
           fill
           className="object-cover object-center"
           priority
-          quality={75}
+          quality={70}
           sizes="100vw"
-          fetchPriority="high"
+          fetchPriority="low"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-bmhw-black/70 via-bmhw-brown/60 to-bmhw-black/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-bmhw-black via-transparent to-bmhw-black/40" />
@@ -63,18 +96,21 @@ export default function ThankYouPage() {
           className="relative block w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-bmhw-gold/70 rounded-full"
         >
           <span className="absolute inset-0 rounded-full bg-white/70 blur-3xl opacity-80" aria-hidden="true" />
-          <Image
-            src={logoSrc}
-            alt={currentLang === 'fr' ? "Coalition pour la Santé Mentale des Noirs d'Ottawa" : 'Ottawa Black Mental Health Coalition'}
-            fill
-            className="object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.95)]"
-            style={{
-              filter: 'drop-shadow(0 12px 25px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 35px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 55px rgba(255, 255, 255, 0.6))',
-              transform: currentLang === 'fr' ? 'scale(1.3)' : 'scale(1)',
-            }}
-            priority
-            sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, (max-width: 1024px) 144px, 160px"
-          />
+          <span
+            className={`absolute inset-0 flex items-center justify-center ${currentLang === 'fr' ? 'md:scale-[1.3] scale-105 origin-center' : ''}`}
+          >
+            <Image
+              src={logoSrc}
+              alt={currentLang === 'fr' ? "Coalition pour la Santé Mentale des Noirs d'Ottawa" : 'Ottawa Black Mental Health Coalition'}
+              width={160}
+              height={160}
+              className="h-full w-full object-contain drop-shadow-[0_0_25px_rgba(255,255,255,0.95)]"
+              style={{
+                filter: 'drop-shadow(0 12px 25px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 35px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 55px rgba(255, 255, 255, 0.6))',
+              }}
+              priority
+            />
+          </span>
         </Link>
       </div>
 
@@ -115,7 +151,7 @@ export default function ThankYouPage() {
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             </button>
 
-            <div className="relative flex-1 self-stretch min-h-0 rounded-3xl overflow-hidden shadow-2xl bg-bmhw-black/50 ring-2 ring-bmhw-gold/40 mx-11 sm:mx-13">
+            <div className="relative flex-1 self-stretch min-h-0 rounded-3xl overflow-hidden shadow-2xl bg-bmhw-black/50 ring-2 ring-bmhw-gold/40 mx-11 sm:mx-12">
               <div key={currentIndex} className="absolute inset-0">
                 <Image
                   src={sliderImages[currentIndex]}
@@ -123,8 +159,8 @@ export default function ThankYouPage() {
                   fill
                   className="object-contain object-center"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                  quality={80}
-                  priority={currentIndex < 3 || currentIndex > sliderImages.length - 3}
+                  quality={72}
+                  priority={currentIndex === 0}
                 />
               </div>
               <div className="absolute inset-0 rounded-3xl shadow-[0_0_60px_rgba(207,163,73,0.3)] pointer-events-none" />
@@ -140,24 +176,39 @@ export default function ThankYouPage() {
             </button>
           </div>
 
-          {/* Dot indicators */}
-          <div className="flex-shrink-0 flex justify-center gap-1.5 mt-2 pb-1 flex-wrap">
-            {sliderImages.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => {
-                  setDirection(index > currentIndex ? 1 : -1);
-                  setCurrentIndex(index);
-                }}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? 'w-6 h-1.5 bg-bmhw-gold'
-                    : 'w-1.5 h-1.5 bg-bmhw-gold/40 hover:bg-bmhw-gold/70'
-                }`}
-                aria-label={`Go to image ${index + 1}`}
-              />
-            ))}
+          {/* Dot indicators — single horizontal row (scroll); flex-wrap + 29×44px caused many stacked rows */}
+          <div className="flex-shrink-0 w-full max-w-full mt-2 pb-1">
+            <p className="sr-only" aria-live="polite">
+              {mounted ? `${t('thankYou.slideIndicator', { current: currentIndex + 1, total: sliderImages.length })}` : `Slide ${currentIndex + 1} of ${sliderImages.length}`}
+            </p>
+            <div
+              ref={dotStripRef}
+              className="flex max-w-full flex-nowrap justify-center gap-0 overflow-x-auto overflow-y-hidden overscroll-x-contain py-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {sliderImages.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  data-dot-active={index === currentIndex ? 'true' : undefined}
+                  onClick={() => {
+                    setDirection(index > currentIndex ? 1 : -1);
+                    setCurrentIndex(index);
+                  }}
+                  className="flex h-11 min-h-[44px] w-11 min-w-[44px] shrink-0 items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bmhw-gold/80"
+                  aria-label={`Go to image ${index + 1}`}
+                  aria-current={index === currentIndex ? 'true' : undefined}
+                >
+                  <span
+                    className={`block rounded-full transition-all duration-300 ${
+                      index === currentIndex
+                        ? 'h-1.5 w-6 bg-bmhw-gold'
+                        : 'h-1.5 w-1.5 bg-bmhw-gold/40 hover:bg-bmhw-gold/70'
+                    }`}
+                    aria-hidden
+                  />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

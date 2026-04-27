@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
@@ -79,10 +80,12 @@ export default function Footer() {
         {/* Developed by AlexNorth */}
         <div className="text-center pt-4 border-t border-bmhw-gold/20">
           <div className="flex items-center justify-center gap-3">
-            <img 
-              src="/assets/images/alexnorth.ico" 
-              alt="AlexNorth Digital" 
-              className="w-4 h-4"
+            <Image
+              src="/assets/images/alexnorth-credit.png"
+              alt="AlexNorth Digital"
+              width={16}
+              height={16}
+              className="h-4 w-4 shrink-0"
             />
             <span className="text-gray-400 text-xs">
               Developed by{' '}
