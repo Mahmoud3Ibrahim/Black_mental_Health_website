@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 const YOUTUBE_EMBED = 'https://www.youtube.com/embed/euDGwRehUb0';
-const THOUGHTFUL_THERAPIST_URL = 'https://www.thoughtfultherapist.ca';
+const THOUGHTFUL_THERAPIST_URL = 'https://www.instagram.com/thoughtfultherapist_/';
 
 /** Intrinsic dimensions of blog01.png — avoids letterboxing from fixed aspect + object-contain */
 const BLOG01_WIDTH = 682;
