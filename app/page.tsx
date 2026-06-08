@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import CelebrationSplash from '@/components/CelebrationSplash';
 import ThankYouPage from '@/components/ThankYouPage';
 import PodcastBlogSection from '@/components/PodcastBlogSection';
 import FeaturedPerformer from '@/components/FeaturedPerformer';
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <CelebrationSplash />
       <ThankYouPage />
       <PodcastBlogSection />
       <FeaturedPerformer />
